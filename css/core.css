@@ -3,7 +3,7 @@
 @media only screen and (min-width: 0em) {
   :root {
     --primary: #196b64;
-    --bodyText: #000;
+    --bodyText: #fcfcfc;
   }
   /* roboto-regular - latin */
   @font-face {
@@ -67,7 +67,6 @@
     margin: 0;
     color: #1a1a1a;
   }
-  a:hover,
   button:hover {
     cursor: pointer;
   }
@@ -117,5 +116,20 @@
     left: 0;
     opacity: 0;
     z-index: -1111111;
+  }
+}
+/* Reset Margins */
+@media only screen and (min-width: 1024px) {
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+  }
+}
+/* Scale full website with the viewport width */
+@media only screen and (min-width: 2000px) {
+  body,
+  html {
+    font-size: .85vw;
   }
 }

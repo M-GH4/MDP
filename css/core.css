@@ -2,35 +2,141 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #196b64;
+    --primary: #d3f3ef;
+    --secondary: #196b64;
     --bodyText: #fcfcfc;
   }
-  /* roboto-regular - latin */
+  /* cormorant-garamond-regular - latin */
   @font-face {
-    font-family: 'Roboto';
+    font-display: swap;
+    font-family: 'Cormorant Garamond';
     font-style: normal;
     font-weight: 400;
-    src: local(''), url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/roboto-v29-latin-regular.woff') format('woff');
+    src: url('../fonts/cormorant-garamond-v16-latin-regular.eot');
+    src: url('../fonts/cormorant-garamond-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/cormorant-garamond-v16-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
     
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
   }
-  /* roboto-700 - latin */
+  /* cormorant-garamond-500 - latin */
   @font-face {
-    font-family: 'Roboto';
+    font-display: swap;
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/cormorant-garamond-v16-latin-500.eot');
+    src: url('../fonts/cormorant-garamond-v16-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/cormorant-garamond-v16-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/cormorant-garamond-v16-latin-500.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
+    
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
+  }
+  /* cormorant-garamond-600 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/cormorant-garamond-v16-latin-600.eot');
+    src: url('../fonts/cormorant-garamond-v16-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/cormorant-garamond-v16-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/cormorant-garamond-v16-latin-600.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
+    
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
+  }
+  /* cormorant-garamond-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Cormorant Garamond';
     font-style: normal;
     font-weight: 700;
-    src: local(''), url('../fonts/roboto-v29-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/roboto-v29-latin-700.woff') format('woff');
+    src: url('../fonts/cormorant-garamond-v16-latin-700.eot');
+    src: url('../fonts/cormorant-garamond-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/cormorant-garamond-v16-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/cormorant-garamond-v16-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
     
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
   }
-  /* roboto-900 - latin */
+  /* hind-guntur-regular - latin */
   @font-face {
-    font-family: 'Roboto';
+    font-display: swap;
+    font-family: 'Hind Guntur';
     font-style: normal;
-    font-weight: 900;
-    src: local(''), url('../fonts/roboto-v29-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/roboto-v29-latin-900.woff') format('woff');
+    font-weight: 400;
+    src: url('../fonts/hind-guntur-v13-latin-regular.eot');
+    src: url('../fonts/hind-guntur-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/hind-guntur-v13-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/hind-guntur-v13-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
     
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
+  }
+  /* hind-guntur-500 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Hind Guntur';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/hind-guntur-v13-latin-500.eot');
+    src: url('../fonts/hind-guntur-v13-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/hind-guntur-v13-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/hind-guntur-v13-latin-500.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
+    
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
+  }
+  /* hind-guntur-600 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Hind Guntur';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/hind-guntur-v13-latin-600.eot');
+    src: url('../fonts/hind-guntur-v13-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/hind-guntur-v13-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/hind-guntur-v13-latin-600.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
+    
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
+  }
+  /* hind-guntur-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Hind Guntur';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/hind-guntur-v13-latin-700.eot');
+    src: url('../fonts/hind-guntur-v13-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/hind-guntur-v13-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/hind-guntur-v13-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
+    
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
+  }
+  /* hind-madurai-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Hind Madurai';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/hind-madurai-v11-latin-regular.eot');
+    src: url('../fonts/hind-madurai-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/hind-madurai-v11-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/hind-madurai-v11-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
+    
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
+  }
+  /* hind-madurai-500 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Hind Madurai';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/hind-madurai-v11-latin-500.eot');
+    src: url('../fonts/hind-madurai-v11-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/hind-madurai-v11-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/hind-madurai-v11-latin-500.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
+    
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
+  }
+  /* hind-madurai-600 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Hind Madurai';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/hind-madurai-v11-latin-600.eot');
+    src: url('../fonts/hind-madurai-v11-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/hind-madurai-v11-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('../fonts/hind-madurai-v11-latin-600.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */;
+    
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    /* IE9 Compat Modes */
   }
   body,
   html {
@@ -105,7 +211,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: #000;
+    background-color: var(--secondary);
     width: 0;
     -webkit-transition: width .3s;
     transition: width .3s;

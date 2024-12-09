@@ -1,13 +1,13 @@
 @media only screen and (min-width: 0em) {
 
     .address{
-        padding: 1em;
+        padding: 16/16em;
         display: flex;
         flex-wrap: wrap;
         font-size: 12/16em;
         justify-content: center;
         text-transform:uppercase;
-        gap: 2em;
+        gap: 32/16em;
 
         &:hover{
             a{
@@ -25,24 +25,77 @@
 
     .middle-head{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        .button-solid{
+            text-wrap: nowrap;
+            width: 170/16em;
+        }
+
+        .logo{
+            order: 0;
+            padding: 1em;
+        }
+
+        .contact-button{
+            order:2;
+        }
+
+        .phone-button{
+            order: 1;
+        }
+
     }
 
-    .container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
+
  
 }
 
 /* Inbetween */
 @media only screen and (min-width: 666px) {
+    .middle-head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .logo{
+            order: 1;
+        }
+
+        .contact-button{
+            order:0;
+        }
+
+        .phone-button{
+            order: 2
+        }
+
+    }
+
 }   
 
 /* Small Desktop */
 @media only screen and (min-width: 1300px) {
+    .middle-head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .logo{
+            order: 1;
+        }
+
+        .contact-button{
+            order:0;
+        }
+
+        .phone-button{
+            order: 2
+        }
+    }
+
     
 }

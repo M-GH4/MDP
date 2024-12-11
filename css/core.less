@@ -9,8 +9,6 @@
         --secondary: #196b64;
         --bodyText: #fcfcfc;
     }
-
-    // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
     
    /* cormorant-garamond-regular - latin */
 @font-face {
@@ -150,7 +148,6 @@
         margin: 0;
         padding: 0;
         font-size: 100%;
-        font-family: 'Roboto', Arial, sans-serif;
         color: var(--bodyText);
         overflow-x: hidden;
     }
@@ -184,19 +181,25 @@
     
     // Buttons
     .button-solid {
-        font-size: 14/16em;
+        font-family: Hind Guntur;
+        font-size: 8/16em;
         font-weight: bold;
+        letter-spacing: 0.2vw;
         text-transform: uppercase;
         text-decoration: none;
         display: inline-block;
         width: auto;
-        line-height: 50/14em;
-        height: 50/14em;
+        line-height: 15/8em;
+        height: 36/8em;
         text-align: center;
-        padding: 0 30/14em;
+        align-content: center;
+        padding: 10.5 22.5/8em;
         position: relative;
         z-index: 1;
         background-color: var(--primary);
+        border: solid;
+        border-width: 1/8em;
+        border-color: rgb(198, 190, 190); //to be changed
 
         // Transition Properties
         color: #000;
@@ -249,5 +252,199 @@
 @media only screen and (min-width: 2000px) {
     body, html {
         font-size: .85vw;
+    }
+}
+
+/*---------!NAV-BAR---------*/
+
+/* Mobile - Side Pop Out */
+@media only screen and (max-width: 1023px) {
+     
+
+    //Navigation Styles
+    #navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        height: auto;
+
+        .background-color-div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: var(--secondary);
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .container {
+            padding: 13/16em 0;
+            width: 96%;
+        }
+
+        // Hamburger Menu Default State toggle
+        .hamburger-menu {
+            position: absolute;
+            right: 2/16em;
+            border: none;
+            height: 48/16em;
+            width: 48/16em;
+            z-index: 100;
+            display: block;
+            background: var(--primary);
+            padding: 0;
+            top:100%;
+            transform: translateY(-50%);
+            transition: top .3s;
+            border-radius: 25px;
+
+            span {
+                height: 2px;
+                width: 30/16em;
+                background-color: #000;
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+
+                //transition properties
+                transition: background-color .3s;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    height: 2px;
+                    width: 80%;
+                    background: #000;
+                    opacity: 1;
+                    top: -6px;
+                    left: 0;
+
+                    //transition properties
+                    transition: width .3s, left .3s, top .3s, transform .5s;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    height: 2px;
+                    width: 80%;
+                    background: #000;
+                    opacity: 1;
+                    top: 6px;
+                    left: 0;
+
+                    //transition properties
+                    transition: width .3s, left .3s, top .3s, transform .3s;
+                }
+            }
+        }
+
+        // Hamburger Menu Open State toggle
+        .hamburger-menu.clicked {
+            span {
+                background-color: transparent;
+                &:before {
+                    width: 100%;
+                    transform: translate(-50%, -50%) rotate(225deg);
+                    left: 50%;
+                    top: 50%;
+                }
+
+                &:after {
+                    width: 100%;
+                    transform: translate(-50%, -50%) rotate(-225deg);
+                    left: 50%;
+                    top: 50%;
+                }
+            }
+        }
+
+        // Navbar Menu Default State
+        #navbar-menu {
+            position: fixed;
+            right: 0;
+            padding: 0;
+            height: 100%;
+            border-radius: 0 0 6/16em 6/16em;
+            z-index: -1;
+            overflow: hidden;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            background-color: var(--secondary);
+            top: 0; //different from navigation placement
+
+            //Transition Properties
+            padding-top: 0;
+            width: 0/16em;
+            transition: width .3s;
+
+
+            ul {
+                padding: 0;
+                perspective: 700px;
+                padding-top: 80/16em;
+                li {
+                    padding: 10/16em 20/16em;
+                    list-style: none;
+                    text-align: right;
+                    //Transition Properties
+                    transform-style: preserve-3d;
+                    opacity: 0;
+                    transform: translateY(-7/16em) rotateX(00deg);
+                    transition: opacity .5s, transform .5s;
+
+                    //Staggar their transitions
+                    &:nth-of-type(1) {
+                        transition-delay: .1s;
+                    }
+                    &:nth-of-type(2) {
+                        transition-delay: .2s;
+                    }
+                    &:nth-of-type(3) {
+                        transition-delay: .3s;
+                    }
+                    &:nth-of-type(4) {
+                        transition-delay: .4s;
+                    }
+                    &:nth-of-type(5) {
+                        transition-delay: .5s;
+                    }
+
+                    &:hover{
+                        background-color: #000;
+                        transition: ease 0.3s;
+                    }
+
+
+
+                    a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: #fcfcfc;
+                        font-size: 19/16em;
+                        text-align: center;
+                        display: inline-block;
+                        position: relative;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        // Navbar Menu Open State
+        #navbar-menu.open {
+            width: 250/16em;
+            z-index: -100;
+
+            ul {
+                li {
+                    opacity: 1;
+                    transform: translateY(0) rotateX(0);
+                }
+            }
+        }
     }
 }

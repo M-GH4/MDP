@@ -23,8 +23,8 @@
 
     <!-- Preload -->
     <link rel="preload" as="image" href="/images/landing-m.webp">
-    <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/cormorant-garamond-v16-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/hind-guntur-v13-latin-regular.woff2" crossorigin>
 
     <link rel="stylesheet" href="/css/critical.css"> <!-- Only above the fold css-->
     <link rel="stylesheet" href="/css/core.css">
@@ -45,19 +45,48 @@
 
     <!-------Head Logo ------->
     <div id="head-logo">
-        <ul class="address">
-            <li><a href="https://maps.app.goo.gl/S6fWp2vtpzphWvZX9" target="_blank">8 Maidenbower Square</a></li>
-            <li><a href="https://maps.app.goo.gl/S6fWp2vtpzphWvZX9" target="_blank">Crawley</a></li>
-            <li><a href="https://maps.app.goo.gl/S6fWp2vtpzphWvZX9" target="_blank">W.Sussex RH10 7QH</a></li>
-        </ul>
         <div class="middle-head container">
-            <a class="button-solid contact-button" href="/about.html">Contact</a>
+            <ul class="address">
+                <li><a href="https://maps.app.goo.gl/S6fWp2vtpzphWvZX9" target="_blank">8 Maidenbower Square</a></li>
+                <li><a href="https://maps.app.goo.gl/S6fWp2vtpzphWvZX9" target="_blank">Crawley</a></li>
+                <li><a href="https://maps.app.goo.gl/S6fWp2vtpzphWvZX9" target="_blank">W.Sussex RH10 7QH</a></li>
+            </ul>
             <a class="logo" aria-label="click to go to home page" href="/index.html">
-                <img aria-hidden="true" src="/images/logo.png" decoding="async" alt="logo" width="171" height="85">
-            </a>
+            <img class="title-logo" aria-hidden="true" src="/images/logo.svg" decoding="async" alt="logo" width="171" height="85">
+        </a>
+            <a class="button-solid contact-button" href="/about.html">Contact</a>
             <a class="button-solid phone-button" href="tel:01293889992">01293 889992</a>
         </div> 
     </div>
    
     <!-------Navigation------->
+
+    <div id="navigation">
+        <div aria-hidden="true" class="background-color-div">
+            <!--This div is used to overcome a z-index issue where the open
+                #navbar-menu is on top of the #navigation. This bar places itself 
+                the #navbar-menu so that menu appears behind the #navigation
+            -->
+        </div>
+        <div class="container">
+            <!--Main Nav-->
+            <nav id="navbar-menu">
+                <ul>
+                    <li><a class="active" href="/index.html">Home</a></li>
+                    <li><a href="/our-history.html">Our history</a></li>
+                    <li><a href="/general-dentistry.html">general dentistry</a></li>
+                    <li><a href="/cosmetic-dentistry.html">cosmetic dentistry</a></li>
+                    <li><a href="/fees.html">fees</a></li>
+                </ul>
+            </nav>
+
+
+            <!--Mobile Nav toggle-->
+            <button class="hamburger-menu">
+               <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
 </body>
+
+<script defer src="scripts/nav.js"></script>

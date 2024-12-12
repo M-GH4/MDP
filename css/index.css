@@ -29,6 +29,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    max-width: 80em;
   }
   .middle-head .address {
     padding: 1em;
@@ -44,7 +45,7 @@
     text-transform: uppercase;
     gap: 2em;
     font-family: hind guntur;
-    font-weight: 600;
+    font-weight: 500;
     width: 100%;
     line-height: 0.0625em;
     -webkit-box-ordinal-group: 2;
@@ -81,6 +82,10 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .middle-head .logo .title-logo {
+    width: 12.8125em;
+    height: 6.375em;
   }
   .middle-head .contact-button {
     -webkit-box-ordinal-group: 3;
@@ -141,31 +146,18 @@
   }
 }
 /* Small Desktop */
-@media only screen and (min-width: 1300px) {
-  .middle-head {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+@media only screen and (min-width: 1023px) {
+  #head-logo {
+    padding-bottom: 2em;
   }
-  .middle-head .logo {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+  #head-logo .middle-head .logo {
+    padding-top: 2em;
   }
-  .middle-head .contact-button {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+  #head-logo .middle-head .logo .title-logo {
+    width: 18.3125em;
+    height: 9.125em;
   }
-  .middle-head .phone-button {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+  .button-solid {
+    font-size: 0.625em;
   }
 }

@@ -255,6 +255,156 @@
         font-size: .85vw;
     }
 }
+/*---------!HEAD-LOGO--------*/
+
+/*--mobile----*/
+@media only screen and (min-width: 0em) {
+
+
+    #head-logo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .middle-head{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;   
+        max-width: 80em;
+        padding-bottom: 3em;
+        
+        .address{
+            padding: 16/16em;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 10/16em;
+            justify-content: center;
+            text-transform:uppercase;
+            gap: 32/16em;
+            font-family: hind guntur;
+            font-weight: 500;
+            width: 100%;
+            line-height: 1/16em;
+            order: 1;
+            margin-bottom: 32/16em;
+
+            &:hover{
+                a{
+                text-decoration: underline;
+                }
+            }
+
+            
+            a{
+                color: #000;
+                text-decoration: none;
+            }
+        }
+
+        .button-solid{
+            text-wrap: nowrap;
+            min-width: 170/16em;
+            flex:1 0 25%;
+            margin-left: 100/170em;
+            margin-right: 100/170em;
+        }
+
+        .logo{
+            order: 0;
+            padding-top: 32/16em;
+            padding-bottom: 32/32em;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .title-logo{
+            width: 205/16em;
+            height: 102/16em;
+            }
+        }
+
+        .contact-button{
+            order:2;
+        }
+
+        .phone-button{
+            order: 1;
+        }
+
+    }
+
+    head{
+        background-color: var(--secondary);
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+
+ 
+}
+
+/* Inbetween */
+@media only screen and (min-width: 666px) {
+
+    .middle-head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .address{
+            order: 0;
+            margin-top: 32/16em;
+            margin-bottom: 0;
+        }
+
+        .logo{
+            order: 2;
+            width: 33%;
+        }
+
+        .contact-button{
+            order:1;
+        }
+
+        .phone-button{
+            order: 3;
+        }
+
+        .button-solid{
+            flex: 0 0 20%;
+        }
+
+    }
+
+}   
+
+/* Small Desktop */
+@media only screen and (min-width: 1023px) {
+   
+    #head-logo{
+        padding-bottom: 32/16em;
+
+        .middle-head{
+            .logo{
+                padding-top: 32/16em;
+                .title-logo{
+                    width: 293/16em;
+                    height: 146/16em;
+                    }
+            }
+        }
+    }
+
+    .button-solid{
+        font-size: 10/16em;
+    }
+
+    
+
+}
 
 /*---------!NAV-BAR---------*/
 
@@ -362,7 +512,6 @@
             left: 0;
             padding: 0;
             height: 100%;
-            border-radius: 0 0 6/16em 6/16em;
             z-index: -1;
             overflow: hidden;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -476,7 +625,7 @@
         position: sticky;
         top: 0;
         overflow: hidden;
-        
+
         .container{
             max-width: 80em;
         }

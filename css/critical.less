@@ -1,0 +1,112 @@
+/*-- -------------------------- -->
+<---          Landing           -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  
+    #hero {
+        padding-bottom: 135/16em;
+        padding-top: 80/16em;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: #000;
+            opacity: .55;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            object-fit: cover;
+
+        }
+
+        .hero-content {
+            width: 84%;
+            margin: auto;
+            position: relative;
+            z-index: 10;
+            text-align: left;
+        }
+
+        .heroCopy {
+            width: 100%;
+            margin: auto;
+            max-width: 1000/16em;
+            position: relative;
+        }
+
+        h1 {
+            font-family: cormorant garamond;
+            text-transform: uppercase;
+            font-size:~"min(8vw, 4em)";
+            font-weight: bold;
+            letter-spacing: 0.3vw;
+            color: #fcfcfc;
+            line-height: 78/64;
+            margin: auto;
+            width: 100%;
+            max-width: 800/64em;
+            margin-bottom: 20/64em;
+        }
+
+        h5{
+            font-family: Cormorant Garamond;
+            font-weight: 500;
+            color: #fcfcfc;
+            margin-bottom: 30/16em;
+            font-size:~"min(2vw, 1em)";
+            max-width: 800/16em;
+            letter-spacing: 0.2vw;
+        }
+
+        .button-solid {
+            margin: auto;
+            display: inline-block;
+            width: auto;
+            max-width: 205/16em;
+            min-width: 170/16em;
+        }
+
+     
+}
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+    #hero {
+        padding: 200/16em 0 300/16em 0;
+        z-index: 1;
+        overflow: hidden;
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+    }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 1300px) {
+    #hero {
+        padding-top: 273/16em;
+        padding-bottom: 307/16em;
+
+    }
+}
+

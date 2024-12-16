@@ -619,15 +619,15 @@
         width: 100%;
         z-index: 200000;
         display: flex;
+        overflow: hidden;
         align-items: center;
         background-color: var(--secondary);
         box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
-        position: sticky;
-        top: 0;
-        overflow: hidden;
+      
 
         .container{
             max-width: 80em;
+            
         }
 
         //hide hamburger menu
@@ -637,6 +637,8 @@
 
         // Navbar Menu
         #navbar-menu {
+            position: sticky;
+            top: 0;
             
             ul {
                 display: flex;
@@ -646,9 +648,10 @@
                 li{
                     list-style-type: none;
                     text-transform: uppercase;
-                    padding: 18/16em;
+                    font-size: 20/16em;
+                    padding: 32.5/20em;
                     height: 100%;
-                    width: 340/16em;
+                    width: 340/20em;
                     display: flex;
                     justify-content: space-around;
 

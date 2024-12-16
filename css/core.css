@@ -607,22 +607,24 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: hidden;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     background-color: var(--secondary);
     -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    overflow: hidden;
   }
   #navigation .container {
     max-width: 80em;
   }
   #navigation .hamburger-menu {
     display: none;
+  }
+  #navigation #navbar-menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
   #navigation #navbar-menu ul {
     display: -webkit-box;
@@ -637,9 +639,10 @@
   #navigation #navbar-menu ul li {
     list-style-type: none;
     text-transform: uppercase;
-    padding: 1.125em;
+    font-size: 1.25em;
+    padding: 1.625em;
     height: 100%;
-    width: 21.25em;
+    width: 17em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

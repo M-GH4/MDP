@@ -17,6 +17,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  justify-items: center;
 }
 #practice-desc .content {
   color: #000;
@@ -28,5 +29,5 @@
 }
 #practice-desc .content p {
   font-family: hind madurai;
-  font-size: min(1.5vw, 2em);
+  font-size: min(3vw, 1em);
 }

@@ -2,7 +2,7 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #hero {
-    padding-bottom: 8.4375em;
+    padding-bottom: 6.25em;
     padding-top: 5em;
     position: relative;
     z-index: 1;
@@ -35,6 +35,7 @@
     position: relative;
     z-index: 10;
     text-align: left;
+    max-width: 80em;
   }
   #hero .heroCopy {
     width: 100%;
@@ -68,14 +69,16 @@
     margin: auto;
     display: inline-block;
     width: auto;
-    max-width: 12.8125em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    max-width: 25em;
     min-width: 10.625em;
   }
 }
 /* Tablet */
 @media only screen and (min-width: 48em) {
   #hero {
-    padding: 12.5em 0 18.75em 0;
+    padding: 9.375em 0 10.625em 0;
     z-index: 1;
     overflow: hidden;
   }
@@ -88,12 +91,20 @@
             justify-content: space-between;
     position: relative;
   }
+  #hero .button-solid {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
 }
 /* Small Desktop */
 @media only screen and (min-width: 1300px) {
   #hero {
     padding-top: 17.0625em;
     padding-bottom: 19.1875em;
+  }
+  #hero .hero-content .button-solid {
+    padding-left: 5em;
+    padding-right: 5em;
   }
 }
 /*<---          Scrollable service menu           -->*/
@@ -128,7 +139,7 @@
         -ms-flex-align: center;
             align-items: center;
     background-color: #94cfc9;
-    height: 6.25em;
+    height: 3.75em;
   }
   #services .service-scroll .service-title h2 {
     font-size: 1em;
@@ -141,7 +152,7 @@
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
-    height: 6.25em;
+    height: 3.75em;
   }
   #services .service-scroll .vertical-menu ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 0.375em rgba(0, 0, 0, 0.3);
@@ -170,7 +181,7 @@
         -ms-flex-align: center;
             align-items: center;
     text-decoration: none;
-    height: 6.25em;
+    height: 3.75em;
     color: #000;
     scroll-snap-align: center;
   }
@@ -178,23 +189,39 @@
     background-color: #cccccc84;
   }
 }
-/* Tablet and larger*/
+/* Tablet*/
 @media only screen and (min-width: 48em) {
   #services .service-scroll .service-title {
+    height: 3.33333333em;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
   }
   #services .service-scroll .service-title h2 {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   #services .service-scroll .vertical-menu {
+    height: 3.33333333em;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
   }
   #services .service-scroll .vertical-menu a {
-    font-size: 1.5em;
-    height: 4.16666667em;
+    font-size: 1em;
+    height: 3.33333333em;
+  }
+}
+/* desktop*/
+@media only screen and (min-width: 60em) {
+  #services .service-scroll .service-title {
+    font-size: 1.125em;
+    height: 5em;
+  }
+  #services .service-scroll .vertical-menu {
+    height: 5.625em;
+  }
+  #services .service-scroll .vertical-menu a {
+    font-size: 1.125em;
+    height: 5em;
   }
 }

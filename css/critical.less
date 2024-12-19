@@ -4,7 +4,7 @@
 @media only screen and (min-width: 0em) {
   
     #hero {
-        padding-bottom: 135/16em;
+        padding-bottom: 100/16em;
         padding-top: 80/16em;
         position: relative;
         z-index: 1;
@@ -39,6 +39,7 @@
             position: relative;
             z-index: 10;
             text-align: left;
+            max-width: 80em;
         }
 
         .heroCopy {
@@ -76,7 +77,9 @@
             margin: auto;
             display: inline-block;
             width: auto;
-            max-width: 205/16em;
+            padding-left: 20/16em;
+            padding-right: 20/16em;
+            max-width: 400/16em;
             min-width: 170/16em;
         }
 
@@ -87,7 +90,7 @@
 /* Tablet */
 @media only screen and (min-width: 48em) {
     #hero {
-        padding: 200/16em 0 300/16em 0;
+        padding: 150/16em 0 170/16em 0;
         z-index: 1;
         overflow: hidden;
 
@@ -95,6 +98,11 @@
             display: flex;
             justify-content: space-between;
             position: relative;
+        }
+
+        .button-solid{
+            padding-left: 40/16em;
+            padding-right: 40/16em;
         }
     }
 }
@@ -105,6 +113,12 @@
         padding-top: 273/16em;
         padding-bottom: 307/16em;
 
+        .hero-content{
+            .button-solid{
+                padding-left: 80/16em;
+                padding-right: 80/16em;
+            }
+        }
     }
 }
 
@@ -131,7 +145,7 @@
                 justify-content: center;
                 align-items: center;
                 background-color: #94cfc9;
-                height: 100/16em;
+                height: 60/16em;
                     
                     h2{
                     font-size: 16/16em;
@@ -162,7 +176,7 @@
                 overflow-y: scroll;
                 scroll-snap-type: y mandatory;
                 flex: 1 1 100%;
-                height: 100/16em;
+                height: 60/16em;
 
                     a{
                     background-color: var(--bodyText);
@@ -170,7 +184,7 @@
                     justify-content: center;
                     align-items: center;
                     text-decoration: none;
-                    height: 100/16em;
+                    height: 60/16em;
                     color: #000;
                     scroll-snap-align: center;
 
@@ -185,22 +199,44 @@
 }
 
 
-/* Tablet and larger*/
+/* Tablet*/
 @media only screen and (min-width: 48em) {
     #services{
         .service-scroll{
             .service-title{
+                height: 80/24em;
                 flex: 1 1 50%;
                 h2{
-                    font-size: 24/16em;
+                    font-size: 24/24em;
                     }
             }
             
             .vertical-menu {
+                height: 80/24em;
                 flex: 1 1 50%;
                     a{
-                        font-size: 24/16em;
-                        height: 100/24em;
+                        font-size: 24/24em;
+                        height: 80/24em;
+                    }
+            }
+        }
+    }
+}
+
+/* desktop*/
+@media only screen and (min-width: 60em) {
+    #services{
+        .service-scroll{
+            .service-title{
+                font-size: 18/16em;
+                height: 90/18em;
+            }
+            
+            .vertical-menu {
+                height: 90/16em;
+                    a{
+                        font-size: 18/16em;
+                        height: 90/18em;
                     }
             }
         }

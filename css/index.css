@@ -51,6 +51,19 @@
   height: 500px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
+}
+#staff-wavey:before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: .55;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 #staff-wavey .container {
   width: 100%;
@@ -225,8 +238,7 @@
 }
 #staff-wavey .container .break {
   height: 0;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  min-width: 50vw;
 }
 #staff-wavey .container .navi-dots-container {
   display: -webkit-box;

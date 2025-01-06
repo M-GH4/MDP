@@ -190,7 +190,7 @@
     text-align: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    padding: 10.5 2.8125em;
+    padding: 1.3125em 2.8125em;
     position: relative;
     z-index: 1;
     background-color: var(--primary);

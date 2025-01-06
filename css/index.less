@@ -1,3 +1,5 @@
+/********************* PRACTCE DESCRIPTION **************/
+
 #practice-desc {
   background-image: url("/images/maidenbower-watermark.svg");
   background-position: left; /* Position the SVG to the left */
@@ -24,10 +26,12 @@
 
     p {
       font-family: hind madurai;
-      font-size: ~"min(3vw, 1em)";
+      font-size: ~"min(4vw, 1em)";
     }
   }
 }
+
+/********************   CARD WAVEY  *******************/
 
 /* Mobile */
 @media only screen and (min-width: 0em) {
@@ -408,6 +412,297 @@
             object-fit: cover;
           }
         }
+      }
+    }
+  }
+}
+
+/********************  COS GEN DENTAL CARDS  *******************/
+
+@media only screen and (min-width: 0em) {
+  #dentistry-types {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #daedeb;
+    text-align: center;
+    background-image: url("/images/maidenbower-watermark.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 25% auto;
+
+    .square-navi {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-flow: row wrap;
+      gap: 20px;
+      padding: 40px;
+      width: 100%;
+
+      .left-card,
+      .right-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        width: 90%;
+        .content {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          gap: 22px;
+          padding: 15px;
+          z-index: 3;
+          position: relative;
+          height: 312px;
+          width: 60%;
+
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: #000;
+            opacity: 0.45;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          }
+          h3 {
+            font-family: Cormorant garamond;
+            text-transform: uppercase;
+            color: white;
+            font-size: ~"min(6vw, 2.5em)";
+          }
+
+          p {
+            font-family: Cormorant garamond;
+            color: white;
+            font-size: ~"min(4vw, 1em)";
+          }
+          a {
+            text-wrap: nowrap;
+          }
+        }
+        picture {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 0;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  #dentistry-types {
+    .square-navi {
+      gap: 40px;
+      .left-card,
+      .right-card {
+        width: 34%;
+        height: 700px;
+        .content {
+          width: 100%;
+          height: 100%;
+          gap: 40px;
+
+          h3 {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/************************** REVIEW SLIDER **********************/
+@media only screen and (min-width: 0em) {
+  @background-gradient: linear-gradient(to left top, #007e6e, #43fdcb78);
+  @card-background: #fff;
+  @text-color: #6a6d78;
+
+  #review-slider2 {
+    .watermark {
+      display: none;
+    }
+    picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      object-fit: cover;
+      background-color: #0dbab1;
+      img {
+        height: 500px;
+        width: 100%;
+      }
+    }
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    background: @background-gradient;
+    z-index: 0;
+
+    .slider-wrapper {
+      max-width: 1100px;
+      width: 100%;
+      position: relative;
+      padding:35px;
+
+      .lrarrow {
+        top: 50%;
+        height: 15px;
+        width: 15px;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        transition: all .2s ease-in-out; 
+        
+
+        &:hover{
+          transform: scale(1.1);
+          transform: translateY(-45%);
+        }
+      }
+      #left-arrow {
+        left: 5px;
+      }
+
+      #right-arrow {
+        right: 5px;
+      }
+
+      .carousel {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+        gap: 16px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: 0;
+
+        :where(.card, .img) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .dragging {
+          scroll-behavior: auto;
+          scroll-snap-type: none;
+          .no-transition {
+            scroll-behavior: auto;
+          }
+          .card {
+            cursor: grab;
+            user-select: none;
+          }
+        }
+
+        .card {
+          scroll-snap-align: start;
+          height: 300px;
+          list-style: none;
+          background: @card-background;
+          border-radius: 76px;
+          cursor: pointer;
+          padding: 35px;
+
+          a {
+            text-decoration: none;
+            .text-wrapper {
+              padding: 10px;
+              font-family: hind madurai;
+              color: #000;
+              h4 {
+                font-weight: 500;
+                font-size: 14/16em;
+                line-height: 1;
+              }
+              p {
+                font-size: 11/16em;
+                padding: 13px 0;
+              }
+
+              .stars {
+                margin-top: 0;
+                img {
+                  width: 10px;
+                }
+              }
+            }
+            .g-sign {
+              padding: 13px 0;
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 30em) {
+  #review-slider2 {
+    .watermark {
+      position: absolute;
+      z-index: 10;
+      top: -70px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 120px;
+    }
+    .slider-wrapper {
+      
+      .lrarrow {
+        top: 50%;
+        &:hover{
+          transform: translateY(-55%);
+        }
+      }
+
+      .carousel {
+        grid-auto-columns: calc((100% / 2)-9px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  #review-slider2 {
+    .watermark{
+      width: 150px;
+    }
+    .slider-wrapper {
+      padding-top: 65px;
+      .carousel {
+        grid-auto-columns: calc((100% / 2.5) - 12px);
+        gap: 87px;
       }
     }
   }

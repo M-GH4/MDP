@@ -1,3 +1,4 @@
+/********************* PRACTCE DESCRIPTION **************/
 #practice-desc {
   background-image: url("/images/maidenbower-watermark.svg");
   background-position: left;
@@ -29,8 +30,9 @@
 }
 #practice-desc .content p {
   font-family: hind madurai;
-  font-size: min(3vw, 1em);
+  font-size: min(4vw, 1em);
 }
+/********************   CARD WAVEY  *******************/
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #staff-wavey {
@@ -441,5 +443,324 @@
     border-radius: 80px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+}
+/********************  COS GEN DENTAL CARDS  *******************/
+@media only screen and (min-width: 0em) {
+  #dentistry-types {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #daedeb;
+    text-align: center;
+    background-image: url("/images/maidenbower-watermark.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 25% auto;
+  }
+  #dentistry-types .square-navi {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+  }
+  #dentistry-types .square-navi .left-card,
+  #dentistry-types .square-navi .right-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 90%;
+  }
+  #dentistry-types .square-navi .left-card .content,
+  #dentistry-types .square-navi .right-card .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 22px;
+    padding: 15px;
+    z-index: 3;
+    position: relative;
+    height: 312px;
+    width: 60%;
+  }
+  #dentistry-types .square-navi .left-card .content:before,
+  #dentistry-types .square-navi .right-card .content:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0.45;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #dentistry-types .square-navi .left-card .content h3,
+  #dentistry-types .square-navi .right-card .content h3 {
+    font-family: Cormorant garamond;
+    text-transform: uppercase;
+    color: white;
+    font-size: min(6vw, 2.5em);
+  }
+  #dentistry-types .square-navi .left-card .content p,
+  #dentistry-types .square-navi .right-card .content p {
+    font-family: Cormorant garamond;
+    color: white;
+    font-size: min(4vw, 1em);
+  }
+  #dentistry-types .square-navi .left-card .content a,
+  #dentistry-types .square-navi .right-card .content a {
+    text-wrap: nowrap;
+  }
+  #dentistry-types .square-navi .left-card picture,
+  #dentistry-types .square-navi .right-card picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+  #dentistry-types .square-navi .left-card picture img,
+  #dentistry-types .square-navi .right-card picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media only screen and (min-width: 60em) {
+  #dentistry-types .square-navi {
+    gap: 40px;
+  }
+  #dentistry-types .square-navi .left-card,
+  #dentistry-types .square-navi .right-card {
+    width: 34%;
+    height: 700px;
+  }
+  #dentistry-types .square-navi .left-card .content,
+  #dentistry-types .square-navi .right-card .content {
+    width: 100%;
+    height: 100%;
+    gap: 40px;
+  }
+  #dentistry-types .square-navi .left-card .content h3,
+  #dentistry-types .square-navi .right-card .content h3 {
+    width: 75%;
+  }
+}
+/************************** REVIEW SLIDER **********************/
+@media only screen and (min-width: 0em) {
+  #review-slider2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 500px;
+    background: -webkit-gradient(linear, right bottom, left top, from(#007e6e), color-stop(78, #43fdcb));
+    background: linear-gradient(to left top, #007e6e, #43fdcb 78);
+    z-index: 0;
+  }
+  #review-slider2 .watermark {
+    display: none;
+  }
+  #review-slider2 picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-color: #0dbab1;
+  }
+  #review-slider2 picture img {
+    height: 500px;
+    width: 100%;
+  }
+  #review-slider2 .slider-wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    padding: 35px;
+  }
+  #review-slider2 .slider-wrapper .lrarrow {
+    top: 50%;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  #review-slider2 .slider-wrapper .lrarrow:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transform: translateY(-45%);
+            transform: translateY(-45%);
+  }
+  #review-slider2 .slider-wrapper #left-arrow {
+    left: 5px;
+  }
+  #review-slider2 .slider-wrapper #right-arrow {
+    right: 5px;
+  }
+  #review-slider2 .slider-wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 16px;
+    overflow-x: auto;
+    -webkit-scroll-snap-type: x mandatory;
+        -ms-scroll-snap-type: x mandatory;
+            scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+  }
+  #review-slider2 .slider-wrapper .carousel :where(.card, .img) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #review-slider2 .slider-wrapper .carousel .dragging {
+    scroll-behavior: auto;
+    -webkit-scroll-snap-type: none;
+        -ms-scroll-snap-type: none;
+            scroll-snap-type: none;
+  }
+  #review-slider2 .slider-wrapper .carousel .dragging .no-transition {
+    scroll-behavior: auto;
+  }
+  #review-slider2 .slider-wrapper .carousel .dragging .card {
+    cursor: -webkit-grab;
+    cursor: grab;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  #review-slider2 .slider-wrapper .carousel .card {
+    scroll-snap-align: start;
+    height: 300px;
+    list-style: none;
+    background: #ffffff;
+    border-radius: 76px;
+    cursor: pointer;
+    padding: 35px;
+  }
+  #review-slider2 .slider-wrapper .carousel .card a {
+    text-decoration: none;
+  }
+  #review-slider2 .slider-wrapper .carousel .card a .text-wrapper {
+    padding: 10px;
+    font-family: hind madurai;
+    color: #000;
+  }
+  #review-slider2 .slider-wrapper .carousel .card a .text-wrapper h4 {
+    font-weight: 500;
+    font-size: 0.875em;
+    line-height: 1;
+  }
+  #review-slider2 .slider-wrapper .carousel .card a .text-wrapper p {
+    font-size: 0.6875em;
+    padding: 13px 0;
+  }
+  #review-slider2 .slider-wrapper .carousel .card a .text-wrapper .stars {
+    margin-top: 0;
+  }
+  #review-slider2 .slider-wrapper .carousel .card a .text-wrapper .stars img {
+    width: 10px;
+  }
+  #review-slider2 .slider-wrapper .carousel .card a .g-sign {
+    padding: 13px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media only screen and (min-width: 30em) {
+  #review-slider2 .watermark {
+    position: absolute;
+    z-index: 10;
+    top: -70px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 120px;
+  }
+  #review-slider2 .slider-wrapper .lrarrow {
+    top: 50%;
+  }
+  #review-slider2 .slider-wrapper .lrarrow:hover {
+    -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
+  }
+  #review-slider2 .slider-wrapper .carousel {
+    grid-auto-columns: calc(41%);
+  }
+}
+@media only screen and (min-width: 60em) {
+  #review-slider2 .watermark {
+    width: 150px;
+  }
+  #review-slider2 .slider-wrapper {
+    padding-top: 65px;
+  }
+  #review-slider2 .slider-wrapper .carousel {
+    grid-auto-columns: calc(28%);
+    gap: 87px;
   }
 }

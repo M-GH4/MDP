@@ -486,6 +486,11 @@
           a {
             text-wrap: nowrap;
           }
+
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(9, 149, 135, 0.599);
+          }
         }
         picture {
           position: absolute;
@@ -517,6 +522,35 @@
       .right-card {
         width: 34%;
         height: 700px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: linear-gradient(
+            0deg,
+            transparent,
+            transparent 30%,
+            rgba(234, 237, 236, 0.3)
+          );
+          transform: rotate(-45deg);
+          transition: all 1s ease;
+          opacity: 0;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 20px rgba(234, 237, 236, 0.599);
+
+          &::after {
+            opacity: 1;
+            transform: rotate(-45deg) translateY(100%);
+          }
+        }
+
         .content {
           width: 100%;
           height: 100%;
@@ -531,14 +565,13 @@
   }
 }
 
-
 /************************** REVIEW SLIDER **********************/
 @media only screen and (min-width: 0em) {
   @background-gradient: linear-gradient(to left top, #007e6e, #43fdcb78);
   @card-background: #fff;
   @text-color: #6a6d78;
 
-  #review-slider2 {
+  #review-slider {
     .watermark {
       display: none;
     }
@@ -569,7 +602,7 @@
       max-width: 1100px;
       width: 100%;
       position: relative;
-      padding:35px;
+      padding: 35px;
 
       .lrarrow {
         top: 50%;
@@ -578,10 +611,9 @@
         text-align: center;
         cursor: pointer;
         position: absolute;
-        transition: all .2s ease-in-out; 
-        
+        transition: all 0.2s ease-in-out;
 
-        &:hover{
+        &:hover {
           transform: scale(1.1);
           transform: translateY(-45%);
         }
@@ -602,7 +634,7 @@
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        scrollbar-width: 0;
+        scrollbar-width: none;
 
         :where(.card, .img) {
           display: flex;
@@ -663,11 +695,15 @@
           }
         }
       }
+
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 }
 @media only screen and (min-width: 30em) {
-  #review-slider2 {
+  #review-slider {
     .watermark {
       position: absolute;
       z-index: 10;
@@ -678,24 +714,32 @@
       width: 120px;
     }
     .slider-wrapper {
-      
       .lrarrow {
         top: 50%;
-        &:hover{
+        &:hover {
           transform: translateY(-55%);
         }
       }
 
       .carousel {
         grid-auto-columns: calc((100% / 2)-9px);
+        height: 400px;
+        align-items: center;
+
+        .card {
+          &:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+          }
+        }
       }
     }
   }
 }
 
 @media only screen and (min-width: 60em) {
-  #review-slider2 {
-    .watermark{
+  #review-slider {
+    .watermark {
       width: 150px;
     }
     .slider-wrapper {
@@ -703,6 +747,171 @@
       .carousel {
         grid-auto-columns: calc((100% / 2.5) - 12px);
         gap: 87px;
+      }
+    }
+  }
+}
+
+/************************** REACH OUT FORM  **********************/
+
+@media only screen and (min-width: 0em) {
+  #reach-out {
+    position: relative;
+    height: 525px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 525px;
+      width: 100%;
+      z-index: -1;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 525px;
+      width: 100%;
+      background: #000;
+      opacity: 0.55;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      text-transform: uppercase;
+      gap: 23/16em;
+
+      p {
+        font-family: hind madurai;
+        z-index: 1;
+      }
+      h2 {
+        font-family: cormorant garamond;
+        z-index: 1;
+        color: #fff;
+        font-size: 32/16em;
+      }
+
+      #contact {
+        margin: auto;
+        z-index: 1;
+
+        .onerow,
+        .tworow,
+        .textarea {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          gap: 10/16em;
+
+          .input-group {
+            display: flex;
+            
+            flex: 1;
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="url"],
+            textarea {
+              margin-bottom: 30/16em;
+              font-size: 12/16em;
+              height: 48/12em;
+              border: 1/12em solid #fff;
+              background: transparent;
+              text-align: center;
+              text-transform: capitalize;
+              width: 100%;
+              flex: 1;
+            }
+
+            input:focus, #enquiry:focus{
+              box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.6);
+              color: #fff;
+              font-family: hind madurai;
+            }
+
+            #enquiry {
+              padding: 48/48em;
+              flex: 1;
+              margin-bottom: 10/16em;
+            }
+
+            ::placeholder {
+              color: #fff;
+              font-family: hind madurai;
+            }
+
+          }
+        }
+
+        .form-submit {
+          text-align: center;
+          .button-solid {
+            border: none;
+          }
+        }
+
+        .checkbox{
+          width: 100%;
+          margin-bottom: 30/16em;
+          text-align: center;
+          label{
+            text-transform: none;
+            font-family: hind madurai;
+            font-size: 12/16em;
+            
+            a{
+              text-decoration: none;
+              color: #fff;
+
+              &:hover{
+                text-decoration:underline;
+              }
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+@media only screen and (min-width: 38em) {
+  #reach-out {
+    .form-wrapper {
+      width: 100%;
+      #contact {
+        width: 70%;
+        .onerow,
+        .tworow,
+        .textarea {
+          .input-group {
+            flex: 1 1 45%;
+            justify-content: center;
+          }
+        }
       }
     }
   }

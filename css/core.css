@@ -671,6 +671,221 @@
     font-size: 1em;
   }
 }
+/************************** REACH OUT FORM  **********************/
+@media only screen and (min-width: 0em) {
+  #reach-out {
+    position: relative;
+    height: 525px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #reach-out picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 525px;
+    width: 100%;
+    z-index: -1;
+  }
+  #reach-out picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #reach-out:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 525px;
+    width: 100%;
+    background: #000;
+    opacity: 0.55;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  #reach-out .form-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+    text-transform: uppercase;
+    gap: 1.4375em;
+  }
+  #reach-out .form-wrapper p {
+    font-family: hind madurai;
+    z-index: 1;
+  }
+  #reach-out .form-wrapper h2 {
+    font-family: cormorant garamond;
+    z-index: 1;
+    color: #fff;
+    font-size: 2em;
+  }
+  #reach-out .form-wrapper #contact {
+    margin: auto;
+    z-index: 1;
+  }
+  #reach-out .form-wrapper #contact .onerow,
+  #reach-out .form-wrapper #contact .tworow,
+  #reach-out .form-wrapper #contact .textarea {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0.625em;
+  }
+  #reach-out .form-wrapper #contact .onerow .input-group,
+  #reach-out .form-wrapper #contact .tworow .input-group,
+  #reach-out .form-wrapper #contact .textarea .input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  #reach-out .form-wrapper #contact .onerow .input-group input[type="text"],
+  #reach-out .form-wrapper #contact .tworow .input-group input[type="text"],
+  #reach-out .form-wrapper #contact .textarea .input-group input[type="text"],
+  #reach-out .form-wrapper #contact .onerow .input-group input[type="email"],
+  #reach-out .form-wrapper #contact .tworow .input-group input[type="email"],
+  #reach-out .form-wrapper #contact .textarea .input-group input[type="email"],
+  #reach-out .form-wrapper #contact .onerow .input-group input[type="tel"],
+  #reach-out .form-wrapper #contact .tworow .input-group input[type="tel"],
+  #reach-out .form-wrapper #contact .textarea .input-group input[type="tel"],
+  #reach-out .form-wrapper #contact .onerow .input-group input[type="url"],
+  #reach-out .form-wrapper #contact .tworow .input-group input[type="url"],
+  #reach-out .form-wrapper #contact .textarea .input-group input[type="url"],
+  #reach-out .form-wrapper #contact .onerow .input-group textarea,
+  #reach-out .form-wrapper #contact .tworow .input-group textarea,
+  #reach-out .form-wrapper #contact .textarea .input-group textarea {
+    margin-bottom: 1.875em;
+    font-size: 0.75em;
+    height: 4em;
+    border: 0.08333333em solid #ffffff;
+    background: transparent;
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  #reach-out .form-wrapper #contact .onerow .input-group input:focus,
+  #reach-out .form-wrapper #contact .tworow .input-group input:focus,
+  #reach-out .form-wrapper #contact .textarea .input-group input:focus,
+  #reach-out .form-wrapper #contact .onerow .input-group #enquiry:focus,
+  #reach-out .form-wrapper #contact .tworow .input-group #enquiry:focus,
+  #reach-out .form-wrapper #contact .textarea .input-group #enquiry:focus {
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.6);
+            box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.6);
+    color: #fff;
+    font-family: hind madurai;
+  }
+  #reach-out .form-wrapper #contact .onerow .input-group #enquiry,
+  #reach-out .form-wrapper #contact .tworow .input-group #enquiry,
+  #reach-out .form-wrapper #contact .textarea .input-group #enquiry {
+    padding: 1em;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-bottom: 0.625em;
+  }
+  #reach-out .form-wrapper #contact .onerow .input-group ::-webkit-input-placeholder,
+  #reach-out .form-wrapper #contact .tworow .input-group ::-webkit-input-placeholder,
+  #reach-out .form-wrapper #contact .textarea .input-group ::-webkit-input-placeholder {
+    color: #fff;
+    font-family: hind madurai;
+  }
+  #reach-out .form-wrapper #contact .onerow .input-group :-ms-input-placeholder,
+  #reach-out .form-wrapper #contact .tworow .input-group :-ms-input-placeholder,
+  #reach-out .form-wrapper #contact .textarea .input-group :-ms-input-placeholder {
+    color: #fff;
+    font-family: hind madurai;
+  }
+  #reach-out .form-wrapper #contact .onerow .input-group ::-ms-input-placeholder,
+  #reach-out .form-wrapper #contact .tworow .input-group ::-ms-input-placeholder,
+  #reach-out .form-wrapper #contact .textarea .input-group ::-ms-input-placeholder {
+    color: #fff;
+    font-family: hind madurai;
+  }
+  #reach-out .form-wrapper #contact .onerow .input-group ::placeholder,
+  #reach-out .form-wrapper #contact .tworow .input-group ::placeholder,
+  #reach-out .form-wrapper #contact .textarea .input-group ::placeholder {
+    color: #fff;
+    font-family: hind madurai;
+  }
+  #reach-out .form-wrapper #contact .form-submit {
+    text-align: center;
+  }
+  #reach-out .form-wrapper #contact .form-submit .button-solid {
+    border: none;
+    background-color: #fff;
+  }
+  #reach-out .form-wrapper #contact .form-submit .button-solid:hover {
+    color: #fff;
+  }
+  #reach-out .form-wrapper #contact .checkbox {
+    width: 100%;
+    margin-bottom: 1.875em;
+    text-align: center;
+  }
+  #reach-out .form-wrapper #contact .checkbox label {
+    text-transform: none;
+    font-family: hind madurai;
+    font-size: 0.75em;
+  }
+  #reach-out .form-wrapper #contact .checkbox label a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #reach-out .form-wrapper #contact .checkbox label a:hover {
+    text-decoration: underline;
+  }
+}
+@media only screen and (min-width: 38em) {
+  #reach-out .form-wrapper {
+    width: 100%;
+  }
+  #reach-out .form-wrapper #contact {
+    width: 70%;
+  }
+  #reach-out .form-wrapper #contact .onerow .input-group,
+  #reach-out .form-wrapper #contact .tworow .input-group,
+  #reach-out .form-wrapper #contact .textarea .input-group {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 45%;
+            flex: 1 1 45%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 /*------------FOOTER------------*/
 @media only screen and (min-width: 0em) {
   #footer .c-logos {

@@ -1,0 +1,151 @@
+/**************modified hero header****************/
+#hero {
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      opacity: 0.45;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  h5 {
+    text-transform: uppercase;
+  }
+}
+
+/***************PRIVACY POLICY*********************/
+@media only screen and (min-width: 0em) {
+  #p-policy {
+    
+    padding: 55/16em 0;
+    .center-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20/16rem 0;
+      h1,
+      h3 {
+        font-family: cormorant garamond;
+        font-weight: 600;
+
+        gap: 20px;
+      }
+      h1 {
+        font-size: 48/16em;
+        text-transform: uppercase;
+        padding: 10/48em 0;
+        font-weight: 700;
+      }
+
+      .bundle {
+        width: 85%;
+        p,
+        li {
+          font-family: hind madurai;
+          color: #000;
+          font-size: 16/16em;
+          padding: 10/16em;
+        }
+        h3 {
+          font-size: 32/16em;
+          padding-top: 15/32em;
+          padding-bottom: 10/32em;
+        }
+        ul {
+          gap: 10px;
+          padding: 10/16em 0;
+          li {
+            list-style-type: none;
+          }
+        }
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 30em) {
+  #p-policy {
+    background-image: url("/images/maidenbower-watermark.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 25% auto;
+    padding: 64/16em 0;
+    .center-text {
+      .bundle {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  #p-policy {
+    .center-text {
+      .bundle {
+        width: 30%;
+      }
+    }
+  }
+}
+
+#years {
+    display: flex;
+    align-items: center;
+  height: 66/16em;
+  background-color: #232424;;
+  .repeat {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5/16em;
+    h3 {
+      font-family: hind guntur;
+      font-size: 16/16em;
+      font-weight: 700;
+      background: linear-gradient(45deg,  #fff, #9c91dd, #c593ca, #a2d2ff);
+      background-clip: text;
+      color: transparent;
+      animation: marble 5s infinite linear;
+      text-transform: uppercase;
+      text-wrap: nowrap;
+     
+
+      @keyframes marble {
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: 100% 100%;
+        }
+      }
+    }
+  }
+}

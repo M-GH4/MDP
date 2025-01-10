@@ -767,7 +767,7 @@
     display: none;
   }
 }
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 35em) {
   #review-slider .watermark {
     position: absolute;
     z-index: 10;
@@ -807,7 +807,7 @@
   }
   #review-slider .slider-wrapper .carousel {
     grid-auto-columns: calc(28%);
-    gap: 87px;
+    gap: 81px;
   }
 }
 /************************** REACH OUT FORM  **********************/
@@ -984,6 +984,10 @@
   }
   #reach-out .form-wrapper #contact .form-submit .button-solid {
     border: none;
+    background-color: #fff;
+  }
+  #reach-out .form-wrapper #contact .form-submit .button-solid:hover {
+    color: #fff;
   }
   #reach-out .form-wrapper #contact .checkbox {
     width: 100%;

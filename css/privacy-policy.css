@@ -1,4 +1,11 @@
 /**************modified hero header****************/
+#hero {
+  padding-bottom: 9.375em;
+  padding-top: 7.5em;
+}
+#hero h1 {
+  max-width: 15em;
+}
 #hero picture {
   position: absolute;
   top: 0;

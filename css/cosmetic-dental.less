@@ -1,0 +1,607 @@
+/**************modified hero header****************/
+#hero {
+  padding-bottom: 150/16em;
+  padding-top: 120/16em;
+
+  h1 {
+    max-width: 15em;
+  }
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      opacity: 0.45;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  h5 {
+    text-transform: uppercase;
+  }
+}
+
+/**************FIRST SECTION TEETH WHITENING****************/
+:root {
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 0.9rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(2.5rem, 7.82vw, 6.25rem) 1rem;
+}
+
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2201 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: (704/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      max-width: (586/16rem);
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+      background-color: #e3e3e3;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .cs-title {
+      max-width: 30ch;
+      color: #000;
+      font-family: cormorant garamond;
+    }
+
+    .cs-text {
+      margin-bottom: (24/16rem);
+      color: #000;
+      font-family: hind guntur;
+    }
+
+    .cs-image-group {
+      /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+      font-size: ~"min(2.3vw, .75rem)";
+      /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+      width: (630/16em);
+      height: (627/16em);
+      order: -1;
+      position: relative;
+      /* prevents flexbox from squishing it */
+      flex: none;
+    }
+
+    .cs-picture {
+      overflow: hidden;
+      display: block;
+      position: absolute;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .cs-picture1 {
+      width: (611/16em);
+      height: (499/16em);
+      top: 0;
+      left: 0;
+      background-color: #daedeb;
+      z-index: -1;
+    }
+
+    .cs-picture2 {
+      width: (380/16em);
+      height: (561/16em);
+      right: 0;
+      bottom: 0;
+      filter: grayscale(1);
+      border-radius: 15px;
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2201 {
+    .cs-container {
+      max-width: (1280/16rem);
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-2201 {
+    .cs-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .cs-content {
+      text-align: left;
+      padding: 2.5rem 3rem 0 7.5rem;
+      align-self: first baseline;
+      align-items: center;
+      margin-left: -70/16rem;
+    }
+
+    .cs-image-group {
+      font-size: ~"min(1.3vw, 1rem)";
+      height: auto;
+      min-height: (627/16em);
+    }
+
+    .cs-picture1 {
+      height: 74.960128%;
+      top: 4%;
+    }
+
+    .cs-picture2 {
+      height: 81.339719%;
+    }
+  }
+}
+
+/**********************SECOND SECTION**********************/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2202 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    color: #000;
+
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: (704/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      max-width: (586/16rem);
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+      background-color: #94cfc9;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .cs-title {
+      max-width: 30ch;
+      font-family: cormorant garamond;
+    }
+
+    .cs-text {
+      margin-bottom: (24/16rem);
+      font-family: hind guntur;
+    }
+
+    .cs-image-group {
+      /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+      font-size: ~"min(2.3vw, .75rem)";
+      /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+      width: (630/16em);
+      height: (627/16em);
+      order: -1;
+      position: relative;
+      /* prevents flexbox from squishing it */
+      flex: none;
+    }
+
+    .cs-picture {
+      overflow: hidden;
+      display: block;
+      position: absolute;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .cs-picture1 {
+      width: (611/16em);
+      height: (499/16em);
+      bottom: 0;
+      right: 0;
+      background-color: #daedeb;
+      z-index: -1;
+    }
+
+    .cs-picture2 {
+      width: (380/16em);
+      height: (561/16em);
+      left: 10%;
+      top: 10%;
+      filter: grayscale(1);
+      border-radius: 15px;
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2202 {
+    .cs-container {
+      max-width: (1280/16rem);
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-2202 {
+    .cs-container {
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .cs-content {
+      text-align: left;
+      padding: (48/16rem) 70/16rem 8/16rem 50/16rem;
+      align-self: flex-start;
+      align-items: center;
+      margin-right: -348.8/16rem;
+      max-width: (838/16rem);
+
+      .cs-text,
+      .cs-title {
+        max-width: (564/16rem);
+        margin-left: -38/16rem;
+      }
+    }
+
+    .cs-image-group {
+      font-size: ~"min(1.3vw, 1rem)";
+      height: auto;
+      min-height: (627/16em);
+    }
+
+    .cs-picture1 {
+      height: 74.960128%;
+    }
+
+    .cs-picture2 {
+      width: 47.34%;
+      left: auto;
+      right: 10%;
+    }
+  }
+}
+
+/**************************THIRD SECTION************************/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #rtsbs-459 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: (704/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      max-width: (586/16rem);
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+      background-color: #e3e3e3;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .cs-title {
+      max-width: 30ch;
+      color: #000;
+      font-family: cormorant garamond;
+    }
+
+    .cs-text {
+      margin-bottom: (24/16rem);
+      color: #000;
+      font-family: hind guntur;
+    }
+
+    .cs-image-group {
+      /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+      font-size: ~"min(2.3vw, 0.8rem)";
+      /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+      width: (600/16em);
+      height: (500/16em);
+      order: -1;
+      position: relative;
+      /* prevents flexbox from squishing it */
+      flex: none;
+
+      .cs-picture {
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        width: (600/16em);
+        height: (499/16em);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 15px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #rtsbs-459 {
+    .cs-container {
+      max-width: (1280/16rem);
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #rtsbs-459 {
+    .cs-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      gap: 0;
+      overflow: visible;
+
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 60%;
+        width: 100%;
+        background: #DAEDEB;
+        transform: translateY(7%);
+        left: 0;
+        z-index: -100;
+      }
+    }
+
+    .cs-content {
+      text-align: left;
+      padding: 2.5rem 5rem;
+      align-self: first baseline;
+      align-items: center;
+      margin-left: -90/16rem;
+    }
+
+    .cs-image-group {
+      font-size: ~"min(1.3vw, 1rem)";
+      height: auto;
+      min-height: (627/16em);
+
+      .cs-picture {
+        height: 60%;
+        bottom: 10%;
+        top: auto;
+      }
+    }
+  }
+}
+
+/*************************FOURTH SECTION***********************/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #rtsbs-462 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: (704/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(1rem, 6vw, 4rem);
+
+      .cs-block {
+        background-color: #94cfc9;
+        padding: 50px 0px;
+        .cs-title {
+          max-width: 30ch;
+          color: #000;
+          font-family: cormorant garamond;
+        }
+      }
+
+      .cs-content {
+        padding: 25px;
+        img {
+          display: none;
+        }
+      }
+      .cs-content,
+      .cs-block {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: (586/16rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+
+        .cs-text {
+          margin-bottom: (24/16rem);
+          color: #000;
+          font-family: hind guntur;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #rtsbs-462 {
+    .cs-container {
+      max-width: (1280/16rem);
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #rtsbs-462 {
+    padding-left: 0;
+    padding-right: 0;
+    
+    .cs-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      gap: 0;
+      overflow: visible;
+
+      .cs-block {
+        justify-content: flex-end;
+        padding-bottom: 0;
+      }
+
+      .cs-content {
+        text-align: left;
+        padding: 10rem 5rem 0rem;
+        align-self: flex-end;
+        align-items: center;
+        z-index: 10001;
+        img {
+          display: block;
+          position: absolute;
+          top: 0;
+          transform: translateX(-105%);
+
+          width: 25%;
+          max-width: 338/16rem;
+        }
+
+        .cs-text {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

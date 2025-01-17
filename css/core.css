@@ -631,7 +631,6 @@
     list-style-type: none;
     text-transform: uppercase;
     font-size: 0.9375em;
-    padding: 1.625em;
     height: 100%;
     width: 17em;
     display: -webkit-box;
@@ -648,6 +647,11 @@
   #navigation #navbar-menu ul li a {
     text-decoration: none;
     color: var(--bodyText);
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 1.625em;
+    text-align: center;
   }
 }
 /* Desktop */

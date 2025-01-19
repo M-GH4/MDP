@@ -317,6 +317,7 @@
   }
 }
 /*************************     FAQ's    ************************************/
+/* Mobile */
 @media only screen and (min-width: 0rem) {
   #faqs .faqwrapper {
     padding: clamp(2.5rem, 7.82vw, 4.25rem) 1rem;
@@ -375,6 +376,7 @@
     content: "\2212";
   }
 }
+/* tablet */
 @media only screen and (min-width: 48rem) {
   #faqs {
     background-image: url("/images/maidenbower-watermark.svg");
@@ -385,4 +387,126 @@
   #faqs .faqwrapper {
     width: 60%;
   }
+}
+/*************************** OPENING TIMES ************************************/
+/* mobile */
+@media only screen and (min-width: 0em) {
+  #opening-times {
+    font-family: cormorant garamond;
+    font-weight: 700;
+    background-color: #daedeb;
+  }
+  #opening-times h1 {
+    font-size: clamp(1.5em, 3vw, 2em);
+    padding-top: 1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  #opening-times .time-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    padding: 1em;
+  }
+  #opening-times .time-container .onerow,
+  #opening-times .time-container .tworow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #opening-times .time-container .onerow .time-wrapper,
+  #opening-times .time-container .tworow .time-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: center;
+    gap: 1em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1em;
+  }
+  #opening-times .time-container .onerow .time-wrapper .open,
+  #opening-times .time-container .tworow .time-wrapper .open {
+    color: #000;
+  }
+  #opening-times .time-container .onerow .time-wrapper .closed,
+  #opening-times .time-container .tworow .time-wrapper .closed {
+    color: #7b8987;
+  }
+}
+/* tablet */
+@media only screen and (min-width: 48em) {
+  #opening-times .time-container {
+    max-width: 80em;
+  }
+  #opening-times .time-container .onerow,
+  #opening-times .time-container .tworow {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #opening-times .time-container .onerow .time-wrapper,
+  #opening-times .time-container .tworow .time-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+    text-wrap: nowrap;
+  }
+  #opening-times .time-container .tworow {
+    width: 60%;
+  }
+}
+/*****************************  MAP ****************************************/
+.responsive-map {
+  overflow: hidden;
+  position: relative;
+  height: 450px;
+  width: 100%;
+}
+.responsive-map a {
+  display: block;
+  height: 100%;
+}
+.responsive-map a picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.responsive-map a picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

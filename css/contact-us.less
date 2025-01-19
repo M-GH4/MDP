@@ -266,6 +266,7 @@
 
 /*************************     FAQ's    ************************************/
 
+/* Mobile */
 @media only screen and (min-width: 0rem) {
   #faqs {
     .faqwrapper {
@@ -330,6 +331,7 @@
   }
 }
 
+/* tablet */
 @media only screen and (min-width: 48rem) {
   #faqs {
     background-image: url("/images/maidenbower-watermark.svg");
@@ -341,3 +343,105 @@
     }
   }
 }
+
+/*************************** OPENING TIMES ************************************/
+
+/* mobile */
+@media only screen and (min-width: 0em) {
+  #opening-times {
+    font-family: cormorant garamond;
+    font-weight: 700;
+    background-color: #daedeb;
+    h1 {
+      font-size: clamp(1.5em, 3vw, 2em);
+      padding-top: 16/16em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .time-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      padding: 16/16em;
+      .onerow,
+      .tworow {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        justify-content: center;
+        .time-wrapper {
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+          gap: 16/16em;
+          justify-content: center;
+          padding: 16/16em;
+          .open {
+            color: #000;
+          }
+          .closed {
+            color: #7b8987;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* tablet */
+@media only screen and (min-width: 48em) {
+  #opening-times {
+    .time-container {
+      max-width: 80em;
+
+      .onerow,
+      .tworow {
+        flex-direction: row;
+        justify-content: space-around;
+        .time-wrapper {
+          flex-direction: column;
+          gap: 0;
+          text-wrap: nowrap;
+        }
+      }
+
+      .tworow {
+        width: 60%;
+      }
+    }
+  }
+}
+
+
+/*****************************  MAP ****************************************/
+.responsive-map{
+    overflow: hidden;
+    position:relative;
+    height:450px;
+    width: 100%;
+    a{
+        display: block;
+        height: 100%;
+       picture {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+    
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+    }
+    }
+    
+    
+    

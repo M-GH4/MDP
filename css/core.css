@@ -819,6 +819,7 @@
         -ms-flex: 1;
             flex: 1;
     margin-bottom: 0.625em;
+    resize: none;
   }
   #reach-out .form-wrapper #contact .onerow .input-group ::-webkit-input-placeholder,
   #reach-out .form-wrapper #contact .tworow .input-group ::-webkit-input-placeholder,

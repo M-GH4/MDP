@@ -1,0 +1,343 @@
+:root {
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(2.5rem, 7.82vw, 6.25rem) 1rem;
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2201 {
+    padding: var(--sectionPadding);
+    background-color: #fbf5f1;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    .gi-picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      opacity: 0.25;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: (704/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: (586/16rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+
+        .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+          text-transform: uppercase;
+          gap: 23/16em;
+
+          p {
+            font-family: hind madurai;
+            z-index: 1;
+          }
+
+          .cs-title {
+            max-width: 30ch;
+            font-family: cormorant garamond;
+            z-index: 1;
+            color: #fff;
+            font-size: clamp(1.5em, 3vw, 2em);
+          }
+
+          #contact {
+            margin: auto;
+            z-index: 1;
+
+            .onerow,
+            .tworow,
+            .textarea {
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: center;
+              gap: 10/16em;
+
+              .input-group {
+                display: flex;
+                color: #000;
+                flex: 1;
+
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"],
+                input[type="url"],
+                textarea {
+                  overflow: scroll;
+                  margin-bottom: 30/16em;
+                  font-size: 12/16em;
+                  height: 48/12em;
+                  border: 1/12em solid #000;
+                  background: #fff;
+                  text-align: center;
+                  text-transform: capitalize;
+                  width: 100%;
+                  flex: 1;
+                }
+
+                input:focus,
+                #enquiry:focus {
+                  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.6);
+                  font-family: hind madurai;
+                }
+
+                #enquiry {
+                  padding: 64/16em;
+                  flex: 1;
+                  margin-bottom: 10/16em;
+                  resize: none;
+                  line-height: 5px;
+                }
+
+                ::placeholder {
+                  color: #000;
+                  font-family: hind madurai;
+                }
+              }
+            }
+
+            .form-submit {
+              text-align: center;
+
+              .button-solid {
+                border: none;
+                background-color: #fff;
+
+                &:hover {
+                  color: #fff;
+                }
+              }
+            }
+
+            .checkbox {
+              width: 100%;
+              margin-bottom: 30/16em;
+              text-align: center;
+              label {
+                text-transform: none;
+                font-family: hind madurai;
+                font-size: 12/16em;
+
+                a {
+                  text-decoration: none;
+                  color: #fff;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .cs-image-group {
+        /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+        font-size: ~"min(2.3vw, .75rem)";
+        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+        width: (630/16em);
+        height: (627/16em);
+        order: -1;
+        position: relative;
+        /* prevents flexbox from squishing it */
+        flex: none;
+
+        .cs-picture {
+          overflow: hidden;
+          display: block;
+          position: absolute;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        .cs-picture1 {
+          width: (384/16em);
+          height: (470/16em);
+          top: 0;
+          left: 0;
+        }
+
+        .cs-picture2 {
+          width: (345/16em);
+          height: (510/16em);
+          right: 23px;
+          bottom: -30px;
+          rotate: 24deg;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2201 {
+    .cs-container {
+      max-width: (1280/16rem);
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-2201 {
+    .cs-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .cs-content {
+      text-align: left;
+      padding: (48/16rem) 0;
+      align-self: center;
+      align-items: flex-start;
+    }
+
+    .cs-image-group {
+      font-size: ~"min(1.3vw, 1rem)";
+      height: auto;
+      min-height: (627/16em);
+    }
+
+    .cs-picture1 {
+      height: 74.960128%;
+    }
+
+    .cs-picture2 {
+      height: 81.339719%;
+
+      right: 0px;
+    }
+  }
+}
+
+/*************************     FAQ's    ************************************/
+
+@media only screen and (min-width: 0rem) {
+  #faqs {
+    .faqwrapper {
+      padding: clamp(2.5rem, 7.82vw, 4.25rem) 1rem;
+      width: 95%;
+      margin: auto;
+      .accordion {
+        background-color: #196b6444;
+        color: #000;
+        cursor: pointer;
+        padding: 18/16em;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 16/16em;
+        transition: 0.4s;
+        font-family: hind guntur;
+        font-weight: 600;
+
+        &:hover {
+          background-color: #ccc;
+        }
+
+        &:after {
+          content: "\002B";
+          color: var(--secondary);
+          font-weight: bold;
+          float: right;
+          margin-left: 5px;
+        }
+      }
+
+      h1 {
+        max-width: 30ch;
+        font-family: cormorant garamond;
+        font-size: clamp(1.5em, 3vw, 2em);
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        padding-bottom: 32/16em;
+      }
+
+      .panel {
+        padding: 20px 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        color: #000;
+        p {
+          padding: inherit;
+        }
+      }
+
+      .active {
+        &:after {
+          content: "\2212";
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  #faqs {
+    background-image: url("/images/maidenbower-watermark.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 21% auto;
+    .faqwrapper {
+      width: 60%;
+    }
+  }
+}

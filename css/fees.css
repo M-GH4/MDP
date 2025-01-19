@@ -1,0 +1,76 @@
+:root {
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(2.5rem, 7.82vw, 6.25rem) 1rem;
+}
+/*************************     FAQ's    ************************************/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #faqs .faqwrapper {
+    padding: clamp(2.5rem, 7.82vw, 4.25rem) 1rem;
+    width: 95%;
+    margin: auto;
+  }
+  #faqs .faqwrapper .accordion {
+    background-color: #196b6444;
+    color: #000;
+    cursor: pointer;
+    padding: 1.125em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    font-family: hind guntur;
+    font-weight: 600;
+  }
+  #faqs .faqwrapper .accordion:hover {
+    background-color: #ccc;
+  }
+  #faqs .faqwrapper .accordion:after {
+    content: "\002B";
+    color: var(--secondary);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  #faqs .faqwrapper h1 {
+    max-width: 30ch;
+    font-family: cormorant garamond;
+    font-size: clamp(1.5em, 3vw, 2em);
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+    padding-bottom: 2em;
+  }
+  #faqs .faqwrapper .panel {
+    padding: 20px 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+    color: #000;
+  }
+  #faqs .faqwrapper .panel p {
+    padding: inherit;
+  }
+  #faqs .faqwrapper .active:after {
+    content: "\2212";
+  }
+}
+/* tablet */
+@media only screen and (min-width: 48rem) {
+  #faqs {
+    background-image: url("/images/maidenbower-watermark.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 21% auto;
+  }
+  #faqs .faqwrapper {
+    width: 60%;
+  }
+}

@@ -11,7 +11,7 @@
     margin: auto;
   }
   #faqs .faqwrapper .accordion {
-    background-color: #196b6444;
+    background-color: #d3fdef;
     color: #000;
     cursor: pointer;
     padding: 1.125em;
@@ -24,6 +24,7 @@
     transition: 0.4s;
     font-family: hind guntur;
     font-weight: 600;
+    gap: 10px;
   }
   #faqs .faqwrapper .accordion:hover {
     background-color: #ccc;
@@ -45,9 +46,10 @@
             justify-content: center;
     margin: auto;
     padding-bottom: 2em;
+    text-transform: uppercase;
   }
   #faqs .faqwrapper .panel {
-    padding: 20px 18px;
+    margin: 15px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
@@ -55,8 +57,21 @@
     transition: max-height 0.2s ease-out;
     color: #000;
   }
-  #faqs .faqwrapper .panel p {
-    padding: inherit;
+  #faqs .faqwrapper .panel .leftcolumn,
+  #faqs .faqwrapper .panel .rightcolumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #faqs .faqwrapper .panel .leftcolumn {
+    float: left;
+  }
+  #faqs .faqwrapper .panel .rightcolumn {
+    float: right;
   }
   #faqs .faqwrapper .active:after {
     content: "\2212";
@@ -72,5 +87,143 @@
   }
   #faqs .faqwrapper {
     width: 60%;
+  }
+}
+/****************************** DENPLAN ********************/
+@media only screen and (min-width: 0em) {
+  #denplan {
+    background-color: #DAEDEB;
+  }
+  #denplan .pricewrapper {
+    padding: clamp(2.5rem, 7.82vw, 4.25rem) 1rem;
+    width: 95%;
+    margin: auto;
+  }
+  #denplan .pricewrapper h1 {
+    max-width: 30ch;
+    font-family: cormorant garamond;
+    font-size: clamp(1.5em, 3vw, 2em);
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+    padding-bottom: 2em;
+    text-transform: uppercase;
+  }
+  #denplan .pricewrapper .banding {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    gap: clamp(25px, 4vw, 100px);
+  }
+  #denplan .pricewrapper .banding .onerow,
+  #denplan .pricewrapper .banding .tworow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: clamp(25px, 4vw, 100px);
+  }
+  #denplan .pricewrapper .banding .onerow .light,
+  #denplan .pricewrapper .banding .tworow .light {
+    background-color: #196B64;
+    opacity: 32%;
+  }
+  #denplan .pricewrapper .banding .onerow .dark,
+  #denplan .pricewrapper .banding .tworow .dark {
+    background-color: #79CCBF;
+  }
+  #denplan .pricewrapper .banding .onerow .infowrap,
+  #denplan .pricewrapper .banding .tworow .infowrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3.75em 3.5em;
+    border-radius: 6.25em;
+  }
+  #denplan .pricewrapper .banding .onerow .infowrap h3,
+  #denplan .pricewrapper .banding .tworow .infowrap h3,
+  #denplan .pricewrapper .banding .onerow .infowrap p,
+  #denplan .pricewrapper .banding .tworow .infowrap p {
+    color: #fcfcfc;
+  }
+  #denplan .pricewrapper .faqwrapper {
+    margin: 3em auto 0;
+  }
+  #denplan .pricewrapper .faqwrapper .accordion {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    padding: 1.125em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    font-family: hind guntur;
+    font-weight: 600;
+    gap: 10px;
+  }
+  #denplan .pricewrapper .faqwrapper .accordion:hover {
+    background-color: #ccc;
+  }
+  #denplan .pricewrapper .faqwrapper .accordion:after {
+    content: "\002B";
+    color: var(--secondary);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  #denplan .pricewrapper .faqwrapper .panel {
+    margin: 15px;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+    color: #000;
+  }
+  #denplan .pricewrapper .faqwrapper .active:after {
+    content: "\2212";
+  }
+}
+@media only screen and (min-width: 48em) {
+  #denplan .pricewrapper {
+    width: 60%;
+  }
+  #denplan .pricewrapper .banding .onerow,
+  #denplan .pricewrapper .banding .tworow {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #denplan .pricewrapper .banding .tworow {
+    width: clamp(40%, 60%);
   }
 }

@@ -11,3 +11,17 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
+
+let bcc = document.getElementsByClassName("downaccordion");
+
+for (let i = 0; i < bcc.length; i++) {
+  bcc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let downPanel = this.previousElementSibling;
+    if (downPanel.style.maxHeight) {
+      downPanel.style.maxHeight = null;
+    } else {
+      downPanel.style.maxHeight = downPanel.scrollHeight + "em";
+    }
+  });
+}

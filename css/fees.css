@@ -1,3 +1,13 @@
+@media only screen and (min-width: 0em) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: cormorant garamond;
+  }
+}
 :root {
   /* 60px - 100px top and bottom */
   --sectionPadding: clamp(2.5rem, 7.82vw, 6.25rem) 1rem;
@@ -38,7 +48,6 @@
   }
   #faqs .faqwrapper h1 {
     max-width: 30ch;
-    font-family: cormorant garamond;
     font-size: clamp(1.5em, 3vw, 2em);
     text-align: center;
     -webkit-box-pack: center;
@@ -92,16 +101,25 @@
 /****************************** DENPLAN ********************/
 @media only screen and (min-width: 0em) {
   #denplan {
-    background-color: #DAEDEB;
+    position: relative;
+    overflow: hidden;
+  }
+  #denplan .gi-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
   }
   #denplan .pricewrapper {
     padding: clamp(2.5rem, 7.82vw, 4.25rem) 1rem;
     width: 95%;
     margin: auto;
+    z-index: 4;
   }
   #denplan .pricewrapper h1 {
     max-width: 30ch;
-    font-family: cormorant garamond;
     font-size: clamp(1.5em, 3vw, 2em);
     text-align: center;
     -webkit-box-pack: center;
@@ -110,6 +128,7 @@
     margin: auto;
     padding-bottom: 2em;
     text-transform: uppercase;
+    color: #fff;
   }
   #denplan .pricewrapper .banding {
     display: -webkit-box;
@@ -141,12 +160,23 @@
   }
   #denplan .pricewrapper .banding .onerow .light,
   #denplan .pricewrapper .banding .tworow .light {
-    background-color: #196B64;
-    opacity: 32%;
+    background-color: #fff;
+  }
+  #denplan .pricewrapper .banding .onerow .light h3,
+  #denplan .pricewrapper .banding .tworow .light h3,
+  #denplan .pricewrapper .banding .onerow .light p,
+  #denplan .pricewrapper .banding .tworow .light p {
+    color: #000;
   }
   #denplan .pricewrapper .banding .onerow .dark,
   #denplan .pricewrapper .banding .tworow .dark {
-    background-color: #79CCBF;
+    background-color: #196b64;
+  }
+  #denplan .pricewrapper .banding .onerow .dark h3,
+  #denplan .pricewrapper .banding .tworow .dark h3,
+  #denplan .pricewrapper .banding .onerow .dark p,
+  #denplan .pricewrapper .banding .tworow .dark p {
+    color: #fcfcfc;
   }
   #denplan .pricewrapper .banding .onerow .infowrap,
   #denplan .pricewrapper .banding .tworow .infowrap {
@@ -162,12 +192,6 @@
             align-items: center;
     padding: 3.75em 3.5em;
     border-radius: 6.25em;
-  }
-  #denplan .pricewrapper .banding .onerow .infowrap h3,
-  #denplan .pricewrapper .banding .tworow .infowrap h3,
-  #denplan .pricewrapper .banding .onerow .infowrap p,
-  #denplan .pricewrapper .banding .tworow .infowrap p {
-    color: #fcfcfc;
   }
   #denplan .pricewrapper .faqwrapper {
     margin: 3em auto 0;
@@ -206,13 +230,17 @@
     transition: max-height 0.2s ease-out;
     color: #000;
   }
+  #denplan .pricewrapper .faqwrapper .panel p {
+    padding: 1em;
+    background: #fcfcfc;
+  }
   #denplan .pricewrapper .faqwrapper .active:after {
     content: "\2212";
   }
 }
 @media only screen and (min-width: 48em) {
   #denplan .pricewrapper {
-    width: 60%;
+    width: 85%;
   }
   #denplan .pricewrapper .banding .onerow,
   #denplan .pricewrapper .banding .tworow {
@@ -225,5 +253,153 @@
   }
   #denplan .pricewrapper .banding .tworow {
     width: clamp(40%, 60%);
+  }
+  #denplan .pricewrapper .faqwrapper {
+    width: 70%;
+  }
+  #denplan .pricewrapper .faqwrapper .panel p {
+    padding: 2em;
+  }
+}
+/****************************** NHS BANDING ********************/
+@media only screen and (min-width: 0em) {
+  #banding {
+    width: 100%;
+    background-color: var(--primary);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 600px;
+  }
+  #banding .bigwrapper {
+    width: 85%;
+    margin: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #banding .bigwrapper h1 {
+    max-width: 30ch;
+    font-size: clamp(1.5em, 3vw, 2em);
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+    text-transform: uppercase;
+    padding: 2em 0 1em 0;
+  }
+  #banding .bigwrapper .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 2em 2em 2em 1em;
+    gap: 3em;
+  }
+  #banding .bigwrapper .wrapper .card {
+    color: #000;
+    background: white;
+    margin-bottom: auto;
+    width: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: dashed;
+    border-color: #000;
+    position: relative;
+  }
+  #banding .bigwrapper .wrapper .card:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: repeating-linear-gradient(-45deg, #ffffff, #ffffff 2px, #196b64 2px, #196b64 118px);
+    top: -20px;
+    left: -20px;
+  }
+  #banding .bigwrapper .wrapper .card:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    background: white;
+    width: 100%;
+    z-index: 0;
+  }
+  #banding .bigwrapper .wrapper .card .textwrapper {
+    margin: auto;
+    z-index: 10;
+    text-align: center;
+    padding: 1em;
+  }
+  #banding .bigwrapper .wrapper .card .textwrapper h2 {
+    text-transform: uppercase;
+  }
+  #banding .bigwrapper .wrapper .card .textwrapper h3 {
+    text-transform: uppercase;
+  }
+  #banding .bigwrapper .wrapper .card .textwrapper .button-solid {
+    border: none;
+    padding: 1em 3em;
+    font-size: 0.625em;
+    margin: 1em;
+    height: auto;
+  }
+  #banding .bigwrapper .wrapper .card .textwrapper .button-solid:after {
+    content: "\002B";
+    font-weight: bold;
+  }
+  #banding .bigwrapper .wrapper .card .textwrapper .downpanel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    list-style-type: none;
+    gap: 1em;
+    padding: 1em;
+    font-family: hind madurai;
+    max-height: 200px;
+    overflow: hidden;
+    -webkit-transition: max-height 0.6s ease-in-out;
+    transition: max-height 0.6s ease-in-out;
+  }
+  #banding .bigwrapper .wrapper .card .textwrapper .active:after {
+    content: "\2212";
+  }
+}
+@media only screen and (min-width: 48em) {
+  #banding .bigwrapper .wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 4em 2em;
+    width: 85%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 90em) {
+  #banding .bigwrapper .wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
   }
 }

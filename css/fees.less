@@ -14,7 +14,7 @@
   --sectionPadding: clamp(2.5rem, 7.82vw, 6.25rem) 1rem;
 }
 
-/*************************     FAQ's    ************************************/
+/*************************     fees   ************************************/
 
 /* Mobile */
 @media only screen and (min-width: 0rem) {
@@ -68,16 +68,23 @@
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         color: #000;
-        .leftcolumn,
-        .rightcolumn {
+        .column{
           display: flex;
           flex-direction: column;
-        }
-        .leftcolumn {
-          float: left;
-        }
-        .rightcolumn {
-          float: right;
+          text-transform:capitalize;
+          gap: 0.5em;
+          .row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .left{
+              width: 60%;
+            }
+            .right{
+              text-align: right;
+            }
+          }
+         
         }
       }
 
@@ -103,6 +110,11 @@
   }
 }
 
+.price-change{
+  text-align: center;
+  padding: 2em 0 1em;
+  color: #000;
+}
 /****************************** DENPLAN ********************/
 
 @media only screen and (min-width: 0em) {
@@ -116,6 +128,9 @@
       height: 100%;
       width: 100%;
       z-index: -2;
+      img{
+        height: 100%;
+      }
     }
 
     .pricewrapper {
@@ -173,8 +188,10 @@
         }
       }
 
+     
+
       .faqwrapper {
-        margin: 3em auto 0;
+        margin: 1em auto 0;
         
         .accordion {
           background-color: #fff;
@@ -226,6 +243,7 @@
   }
 }
 
+
 @media only screen and (min-width: 48em) {
   #denplan {
     .pricewrapper {
@@ -276,7 +294,7 @@
         justify-content: center;
         margin: auto;
         text-transform: uppercase;
-        padding: 32/16em 0 16/16em 0;
+        padding-top: 32/16em;
       }
 
       .wrapper {

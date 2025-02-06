@@ -1,0 +1,415 @@
+@media only screen and (min-width: 0em) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: cormorant garamond;
+  }
+}
+
+:root {
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(2.5rem, 7.82vw, 6.25rem) 1rem;
+}
+
+/*************************     fees   ************************************/
+
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #faqs {
+    .faqwrapper {
+      padding: clamp(2.5rem, 7.82vw, 4.25rem) 1rem;
+      width: 95%;
+      margin: auto;
+      .accordion {
+        background-color: #d3fdef;
+        color: #000;
+        cursor: pointer;
+        padding: 18/16em;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 16/16em;
+        transition: 0.4s;
+        font-family: hind guntur;
+        font-weight: 600;
+        gap: 10px;
+
+        &:hover {
+          background-color: #ccc;
+        }
+
+        &:after {
+          content: "\002B";
+          color: var(--secondary);
+          font-weight: bold;
+          float: right;
+          margin-left: 5px;
+        }
+      }
+
+      h1 {
+        max-width: 30ch;
+        font-size: clamp(1.5em, 3vw, 2em);
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        padding-bottom: 32/16em;
+        text-transform: uppercase;
+      }
+
+      .panel {
+        margin: 15px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        color: #000;
+        .column{
+          display: flex;
+          flex-direction: column;
+          text-transform:capitalize;
+          gap: 0.5em;
+          .row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .left{
+              width: 60%;
+            }
+            .right{
+              text-align: right;
+            }
+          }
+         
+        }
+      }
+
+      .active {
+        &:after {
+          content: "\2212";
+        }
+      }
+    }
+  }
+}
+
+/* tablet */
+@media only screen and (min-width: 48rem) {
+  #faqs {
+    background-image: url("/images/maidenbower-watermark.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 21% auto;
+    .faqwrapper {
+      width: 60%;
+    }
+  }
+}
+
+.price-change{
+  text-align: center;
+  padding: 2em 0 1em;
+  color: #000;
+}
+/****************************** DENPLAN ********************/
+
+@media only screen and (min-width: 0em) {
+  #denplan {
+    position: relative;
+    overflow: hidden;
+    .gi-picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -2;
+      img{
+        height: 100%;
+      }
+    }
+
+    .pricewrapper {
+      padding: clamp(2.5rem, 7.82vw, 4.25rem) 1rem;
+      width: 95%;
+      margin: auto;
+      z-index: 4;
+
+      h1 {
+        max-width: 30ch;
+        font-size: clamp(1.5em, 3vw, 2em);
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        padding-bottom: 32/16em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      .banding {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        gap: clamp(25px, 4vw, 100px);
+
+        .onerow,
+        .tworow {
+          display: flex;
+          flex-direction: column; //change to row in larger screen
+          justify-content: center;
+          gap: clamp(25px, 4vw, 100px);
+
+          .light {
+            background-color: #fff;
+            h3,
+            p {
+              color: #000;
+            }
+          }
+          .dark {
+            background-color: #196b64;
+            h3,
+            p {
+              color: #fcfcfc;
+            }
+          }
+          .infowrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60/16em 56/16em;
+            border-radius: 100/16em;
+          }
+        }
+      }
+
+     
+
+      .faqwrapper {
+        margin: 1em auto 0;
+        
+        .accordion {
+          background-color: #fff;
+          color: #000;
+          cursor: pointer;
+          padding: 18/16em;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 16/16em;
+          transition: 0.4s;
+          font-family: hind guntur;
+          font-weight: 600;
+          gap: 10px;
+
+          &:hover {
+            background-color: #ccc;
+          }
+
+          &:after {
+            content: "\002B";
+            color: var(--secondary);
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+          }
+        }
+
+        .panel {
+          margin: 15px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          color: #000;
+          p {
+            padding: 1em;
+            background: #fcfcfc;
+          }
+        }
+
+        .active {
+          &:after {
+            content: "\2212";
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 48em) {
+  #denplan {
+    .pricewrapper {
+      width: 85%;
+      .banding {
+        .onerow,
+        .tworow {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+
+        .tworow {
+          width: clamp(40%, 60%);
+        }
+      }
+      .faqwrapper {
+        width: 70%;
+        .panel {
+          p {
+            padding: 2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+/****************************** NHS BANDING ********************/
+
+@media only screen and (min-width: 0em) {
+  #banding {
+    width: 100%;
+    background-color: var(--primary);
+
+    display: flex;
+    min-height: 600px;
+    
+
+    .bigwrapper {
+      width: 85%;
+      margin: auto;
+      align-items: center;
+
+      h1 {
+        max-width: 30ch;
+        font-size: clamp(1.5em, 3vw, 2em);
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        text-transform: uppercase;
+        padding-top: 32/16em;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2em 2em 2em 1em;
+        gap: 3em;
+
+        .card {
+          color: #000;
+          background: white;
+          margin-bottom: auto;
+          width: 250px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border: dashed;
+          border-color: #000;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: repeating-linear-gradient(
+              -45deg,
+              #fff,
+              #fff 2px,
+              #196b64 2px,
+              #196b64 118px
+            );
+            top: -20px;
+            left: -20px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 100%;
+            background: white;
+            width: 100%;
+            z-index: 0;
+          }
+          .textwrapper {
+            margin: auto;
+            z-index: 10;
+            text-align: center;
+            padding: 16/16em;
+
+            h2 {
+              text-transform: uppercase;
+            }
+            h3 {
+              text-transform: uppercase;
+            }
+
+            .button-solid {
+              border: none;
+              padding: 1em 3em;
+              font-size: 10/16em;
+              margin: 1em;
+              height: auto;
+
+              &:after {
+                content: "\002B";
+                font-weight: bold;
+                
+              }
+            }
+            .downpanel {
+              display: flex;
+
+              flex-direction: column;
+              list-style-type: none;
+              gap: 1em;
+              padding: 1em;
+              font-family: hind madurai;
+              max-height: 200px;
+              overflow: hidden;
+              transition: max-height 0.6s ease-in-out;
+            }
+
+            .active {
+              &:after {
+                content: "\2212";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  #banding {
+    .bigwrapper {
+      .wrapper {
+        flex-flow: row wrap;
+        padding: 4em 2em;
+        width: 85%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 90em) {
+  #banding {
+    .bigwrapper {
+      .wrapper {
+        flex-flow: row nowrap;
+      }
+    }
+  }
+}

@@ -134,7 +134,6 @@
       z-index: -2;
       img{
         height: 100%;
-        width: 100%;
       }
     }
 
@@ -251,29 +250,39 @@
 
 @media only screen and (min-width: 48em) {
   #denplan {
-    .pricewrapper {
-      width: 85%;
-      .banding {
-        .onerow,
-        .tworow {
-          flex-direction: row;
-          justify-content: space-around;
-        }
-
-        .tworow {
-          width: clamp(40%, 60%);
+      .gi-picture {
+        img{
+          height: 100%;
+          width: 100%;
         }
       }
-      .faqwrapper {
-        width: 70%;
-        .panel {
-          p {
-            padding: 2em;
+
+      .pricewrapper {
+        width: 85%;
+        .banding {
+          .onerow,
+          .tworow {
+            flex-direction: row;
+            justify-content: space-around;
+          }
+  
+          .tworow {
+            width: clamp(40%, 60%);
+          }
+        }
+        .faqwrapper {
+          width: 70%;
+          .panel {
+            p {
+              padding: 2em;
+            }
           }
         }
       }
-    }
-  }
+
+    
+
+}
 }
 
 /****************************** NHS BANDING ********************/
@@ -304,9 +313,9 @@
 
       .wrapper {
         display: flex;
-        flex-direction: column;
+        flex-flow: row wrap;
         justify-content: space-around;
-        padding: 2em 2em 2em 1em;
+        padding: 2em;
         gap: 3em;
 
         .card {

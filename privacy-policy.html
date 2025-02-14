@@ -403,74 +403,84 @@
           >
             <div class="onerow">
               <div class="input-group">
-                <input
-                  id="first name"
-                  aria-label="first name"
-                  class="input1"
-                  name="first name"
-                  placeholder="first Name*"
-                  type="text"
-                  tabindex="1"
-                  required
-                />
+                <label class="f-label">
+                  first name*:
+                  <input
+                    id="first name"
+                    aria-label="first name"
+                    class="input1"
+                    name="first name"
+                    placeholder="john"
+                    type="text"
+                    required
+                  />
+                </label>
                 <div aria-hidden="true" class="hover-box"></div>
               </div>
 
               <div class="input-group">
-                <input
-                  id="last name"
-                  aria-label="last name"
-                  class="input1"
-                  name="last name"
-                  placeholder="last Name*"
-                  type="text"
-                  tabindex="2"
-                  required
-                />
+                <label class="f-label">
+                  last name*:
+                  <input
+                    id="last name"
+                    aria-label="last name"
+                    class="input1"
+                    name="last name"
+                    placeholder="doe"
+                    type="text"
+                    required
+                  />
+                </label>
                 <div aria-hidden="true" class="hover-box"></div>
               </div>
             </div>
 
             <div class="tworow">
               <div class="input-group">
-                <input
-                  id="email"
-                  aria-label="email"
-                  class="input1"
-                  name="email"
-                  placeholder="Email Address*"
-                  type="email"
-                  tabindex="3"
-                  required
-                />
+                <label class="f-label">
+                  email*:
+                  <input
+                    id="email"
+                    aria-label="email"
+                    class="input1"
+                    name="email"
+                    placeholder="example@example.com"
+                    type="email"
+                    required
+                  />
+                </label>
                 <div aria-hidden="true" class="hover-box"></div>
               </div>
 
               <div class="input-group">
-                <input
-                  id="phone"
-                  aria-label="phone number"
-                  class="input1"
-                  name="phone"
-                  placeholder="Phone*"
-                  type="tel"
-                  tabindex="4"
-                  required
-                />
+                <label class="f-label">
+                  phone*:
+                  <input
+                    id="phone"
+                    aria-label="phone number"
+                    class="input1"
+                    name="phone"
+                    placeholder="+44 01293 888992"
+                    type="tel"
+                    required
+                  />
+                </label>
                 <div aria-hidden="true" class="hover-box"></div>
               </div>
             </div>
 
             <div class="textarea">
               <div class="input-group">
-                <textarea
-                  id="enquiry"
-                  aria-label="write your enquiry"
-                  name="enquiry"
-                  placeholder="Your enquiry*"
-                  tabindex="5"
-                  required
-                ></textarea>
+                <label class="f-label">
+                  your enquiry*:
+                  <textarea
+                    id="enquiry"
+                    aria-label="write your enquiry"
+                    name="enquiry"
+                    placeholder="I'd like to ask about..."
+                    required
+                  ></textarea>
+                </label>
                 <div aria-hidden="true" class="hover-box"></div>
               </div>
 
@@ -505,13 +515,20 @@
         </div>
 
         <picture>
-          <source media="(max-width: 600px)" srcset="/images/webpsmall/contact-min.webp" />
-          <source media="(min-width: 601px)" srcset="/images/webplarge/contact.webp" />
+          <source
+            media="(max-width: 600px)"
+            srcset="/images/webpsmall/contact-min.webp"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/images/webplarge/contact.webp"
+          />
           <img
             aria-hidden="true"
             decoding="async"
             src="/images/fullsize/contact.jpg"
             alt="man using his phone smiling"
+            loading="lazy"
           />
         </picture>
       </section>

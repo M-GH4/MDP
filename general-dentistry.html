@@ -35,15 +35,7 @@
     <link rel="manifest" href="/favicons/site.webmanifest" />
 
     <link rel="preload" as="image" href="/images/logo.svg" />
-    <link rel="preload" as="image" href="/images/webpsmall/toppic1-min.webp" />
-    <link rel="preload" as="image" href="/images/webplarge/toppic1.webp" />
-    <link rel="preload" as="image" href="/images/fullsize/toppic1.jpg" />
-    <link rel="preload" as="image" href="/images/webpsmall/toppic2-min.webp" />
-    <link rel="preload" as="image" href="/images/webplarge/toppic2.webp" />
-    <link rel="preload" as="image" href="/images/fullsize/toppic2.jpg" />
-    <link rel="preload" as="image" href="/images/webpsmall/toppic3-min.webp" />
-    <link rel="preload" as="image" href="/images/webplarge/toppic3.webp" />
-    <link rel="preload" as="image" href="/images/fullsize/toppic3.jpg" />
+ 
     <!-- landing images in hero section, fonts need to be added when this is finished-->
     <link
       rel="preload"
@@ -75,6 +67,13 @@
     <link
       rel="stylesheet"
       href="/css/cosmetic-dental.css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+    <!--lower page core-->
+    <link
+      rel="stylesheet"
+      href="/css/lower-core.css"
       media="print"
       onload="this.media='all'; this.onload=null;"
     />
@@ -150,7 +149,10 @@
         </nav>
 
         <!--Mobile Nav toggle-->
-        <button class="hamburger-menu">
+        <button
+          class="hamburger-menu"
+          aria-label="toggle to open mobile navigation menu"
+        >
           <span aria-hidden="true"></span>
         </button>
       </div>
@@ -159,11 +161,12 @@
     <!--Main Content-->
     <main id="main">
       <!--------LANDING--------->
+
       <section id="mod-hero">
         <div class="hero-content">
           <div class="hero-copy">
-            <h5>home/</h5>
-            <h1>general dentistry</h1>
+            <p class="subtitle">home/</p>
+            <h1>General Dentistry</h1>
           </div>
         </div>
         <div class="hero-slidey">
@@ -194,7 +197,7 @@
             />
             <img
               aria-hidden="true"
-              decoding="async"
+              loading="lazy"
               src="/images/fullsize/toppic2.jpg"
               alt="lady with straight teeth smiling"
             />
@@ -210,7 +213,7 @@
             />
             <img
               aria-hidden="true"
-              decoding="async"
+              loading="lazy"
               src="/images/fullsize/toppic3.jpg"
               alt="young adult lady happy and smiling"
             />
@@ -413,7 +416,7 @@
           </div>
 
           <div class="cs-content">
-            <img src="/images/watermarkfull.svg" alt="watermark" />
+            <img src="/images/watermarkfull.svg" alt="watermark" loading="lazy" />
             <p class="cs-text">
               Oral hygiene is paramount to maintaining healthy teeth and a great
               smile. Our dentists will suggest tailored check-up timings based
@@ -490,6 +493,7 @@
                     name="email"
                     placeholder="example@example.com"
                     type="email"
+                    autocomplete="email"
                     required
                   />
                 </label>
@@ -506,6 +510,7 @@
                     name="phone"
                     placeholder="+44 01293 888992"
                     type="tel"
+                    autocomplete="tel"
                     required
                   />
                 </label>
@@ -587,30 +592,45 @@
             alt="Mouth Cancer Foundation logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="74"
+            height="27"
           />
           <img
             src="/images/CQC.svg"
             alt="CQC logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="53"
+            height="18"
           />
           <img
             src="/images/whitedb.svg"
             alt="White Dental Beauty logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="18"
+            height="18"
           />
           <img
             src="/images/BDA.svg"
             alt="BDA logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="44"
+            height="18"
           />
           <img
             src="/images/NHS.svg"
             alt="NHS logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="44"
+            height="18"
           />
         </div>
       </div>

@@ -75,6 +75,9 @@
       media="print"
       onload="this.media='all'; this.onload=null;"
     />
+    <!--lower page core-->
+    <link rel="stylesheet" href="/css/lower-core.css" media="print" onload="this.media='all'; this.onload=null;"/>
+
 
     <!--If the user has javascript disbaled, load this stylesheet-->
     <noscript>
@@ -620,11 +623,11 @@
             </div>
             <picture>
               <source
-                media="(max-width: 960px)"
-                srcset="/images/webpsmall/leftcos-min.webp"
+                media="(max-width: 959px)"
+                srcset="/images/webpsmall/leftcos-min_cropped.webp"
               />
               <source
-                media="(min-width: 961px)"
+                media="(min-width: 960px)"
                 srcset="/images/webplarge/leftcos.webp"
               />
               <img
@@ -652,7 +655,7 @@
             <picture>
               <source
                 media="(max-width: 960px)"
-                srcset="/images/webpsmall/rightgen-min.webp"
+                srcset="/images/webpsmall/rightgen-min_cropped.webp"
               />
               <source
                 media="(min-width: 961px)"

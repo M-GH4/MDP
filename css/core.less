@@ -24,6 +24,13 @@
         url("../fonts/cormorant-garamond-v16-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
   }
 
+  @font-face {
+    font-family: "fallback for Cormorant Garamond R";
+    src: local(Arial);
+    size-adjust: 90%;
+    descent-override: 10%;
+  }
+
   /* cormorant-garamond-500 - latin */
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -69,6 +76,13 @@
         url("../fonts/cormorant-garamond-v16-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
   }
 
+  @font-face {
+    font-family: "fallback for Hind Guntur";
+    src: local(Arial);
+    size-adjust: 98%;
+    descent-override: 52%;
+  }
+
   /* hind-guntur-regular - latin */
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -82,6 +96,13 @@
         format("woff2"),
       /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
         url("../fonts/hind-guntur-v13-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+  }
+
+  @font-face {
+    font-family: "fallback for Hind Guntur 500";
+    src: local(Arial);
+    size-adjust: 100%;
+    descent-override: 52%;
   }
 
   /* hind-guntur-500 - latin */
@@ -114,6 +135,13 @@
         url("../fonts/hind-guntur-v13-latin-600.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
   }
 
+  @font-face {
+    font-family: "fallback for Hind Guntur Bold";
+    src: local(Arial);
+    size-adjust: 104%;
+    descent-override: 52%;
+  }
+
   /* hind-guntur-700 - latin */
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -127,6 +155,12 @@
         format("woff2"),
       /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
         url("../fonts/hind-guntur-v13-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+  }
+  
+  @font-face {
+    font-family: "fallback for Hind Madurai";
+    src: local(Arial);
+    size-adjust: 98%;
   }
 
   /* hind-madurai-regular - latin */
@@ -144,6 +178,12 @@
         url("../fonts/hind-madurai-v11-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
   }
 
+  @font-face {
+    font-family: "fallback for Hind Madurai 500";
+    src: local(Arial);
+    size-adjust: 99%;
+  }
+
   /* hind-madurai-500 - latin */
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -157,6 +197,12 @@
         format("woff2"),
       /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
         url("../fonts/hind-madurai-v11-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+  }
+
+  @font-face {
+    font-family: "fallback for Hind Madurai 600";
+    src: local(Arial);
+    size-adjust: 100%;
   }
 
   /* hind-madurai-600 - latin */
@@ -219,7 +265,7 @@
 
   // Buttons
   .button-solid {
-    font-family: Hind Guntur;
+    font-family: Hind Guntur, "fallback for Hind Guntur Bold";
     font-size: 8/16em;
     font-weight: bold;
     letter-spacing: 0.2vw;
@@ -320,10 +366,9 @@
       justify-content: center;
       text-transform: uppercase;
       gap: 32/16em;
-      font-family: hind guntur;
+      font-family: hind guntur, "fallback for Hind Guntur 500";
       font-weight: 500;
       width: 100%;
-      line-height: 1/16em;
       order: 1;
       margin-bottom: 32/16em;
 
@@ -349,8 +394,7 @@
 
     .logo {
       order: 0;
-      padding-top: 32/16em;
-      padding-bottom: 32/32em;
+     padding: 2em;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -593,6 +637,7 @@
             display: inline-block;
             position: relative;
             font-weight: bold;
+            font-family: hind guntur, "fallback for Hind Guntur";
           }
         }
       }
@@ -666,6 +711,7 @@
             width: 100%;
             padding: 26/16em;
             text-align: center;
+            font-family: hind guntur, "fallback for Hind Guntur";
           }
         }
       }
@@ -759,11 +805,11 @@
       gap: 23/16em;
 
       p {
-        font-family: hind madurai;
+        font-family: hind madurai, "fallback for Hind Madurai";
         z-index: 1;
       }
       h2 {
-        font-family: cormorant garamond;
+        font-family: cormorant garamond, "fallback for Cormorant Garamond R";
         z-index: 1;
         color: #fff;
         font-size: 32/16em;
@@ -789,6 +835,7 @@
             font-size: (16/16rem);
             width: 100%;
             text-transform: capitalize;
+            font-family: hind madurai, "fallback for Hind Madurai";
                
                  input[type="text"],
             input[type="email"],
@@ -810,7 +857,7 @@
             input:focus, #enquiry:focus{
               box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.6);
               color: #fff;
-              font-family: hind madurai;
+              font-family: hind madurai, "fallback for Hind Madurai";
             }
 
             #enquiry {
@@ -822,7 +869,7 @@
 
             ::placeholder {
               color: #fff;
-              font-family: hind madurai;
+              font-family: hind madurai, "fallback for Hind Madurai";
               text-transform: capitalize;
             }
 
@@ -849,7 +896,7 @@
           text-align: center;
           label{
             text-transform: none;
-            font-family: hind madurai;
+            font-family: hind madurai, "fallback for Hind Madurai";
             font-size: 12/16em;
             
             a{
@@ -939,14 +986,14 @@
 
             li {
               h2 {
-                font-family: cormorant garamond;
+                font-family: cormorant garamond, "fallback for Cormorant Garamond R";
                 font-weight: 600;
                 font-size: 16/16em;
                 text-transform: uppercase;
                 padding-bottom: 5px;
               }
               a {
-                font-family: hind guntur;
+                font-family: hind guntur, "fallback for Hind Guntur 500";
                 font-size: 12/16em;
                 text-transform: uppercase;
                 text-decoration: none;
@@ -989,7 +1036,7 @@
           a {
             color: #000;
             text-decoration: none;
-            font-family: hind madurai;
+            font-family: hind madurai, "fallback for Hind Madurai";
             font-size: 8/16em;
             font-weight: 400;
             display: flex;
@@ -1002,7 +1049,7 @@
       }
       .credit {
         color: #000;
-        font-family: hind guntur;
+        font-family: hind guntur, "fallback for Hind Guntur";
         font-weight: 100;
         font-size: 8/16em;
         display: flex;

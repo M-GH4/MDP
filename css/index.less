@@ -19,13 +19,13 @@
     color: #000;
 
     h1 {
-      font-family: cormorant garamond;
+      font-family: cormorant garamond, "fallback for Cormorant Garamond R";
       font-weight: 500;
       font-size: ~"min(7vw, 4em)";
     }
 
     p {
-      font-family: hind madurai;
+      font-family: hind madurai, "fallback for Hind Madurai";
       font-size: ~"min(4vw, 1em)";
     }
   }
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     transition: background 0.4s ease-in;
-    background-image: url("/images/wavesbg.jpg");
+    background-image: url("/images/wavesbg.webp");
     margin: 0;
     padding: 0;
     width: 100%;
@@ -105,19 +105,20 @@
               h2 {
                 color: #fff;
                 font-size: 16/16em;
-                font-family: cormorant garamond;
+                font-family: cormorant garamond, "fallback for Cormorant Garamond R";
                 margin: 4px 0px;
               }
 
-              h5 {
+              .mini-title {
                 font-size: 8/16em;
                 font-family: hind guntur;
                 text-transform: uppercase;
                 color: #fff;
+                font-weight: 700;
               }
               p {
                 color: #fff;
-                font-family: hind madurai;
+                font-family: hind madurai, "fallback for Hind Madurai";
                 font-size: 12/16em;
               }
             }
@@ -314,7 +315,7 @@
                 line-height: 24/64em;
               }
 
-              h5 {
+              .mini-title {
                 font-size: 12/16em;
               }
               p {
@@ -472,14 +473,14 @@
             z-index: -1;
           }
           h3 {
-            font-family: Cormorant garamond;
+            font-family: Cormorant garamond, "fallback for Cormorant Garamond R";
             text-transform: uppercase;
             color: white;
             font-size: ~"min(6vw, 2.5em)";
           }
 
           p {
-            font-family: Cormorant garamond;
+            font-family: Cormorant garamond, "fallback for Cormorant Garamond R";
             color: white;
             font-size: ~"min(4vw, 1em)";
           }
@@ -668,7 +669,7 @@
             text-decoration: none;
             .text-wrapper {
               padding: 10px;
-              font-family: hind madurai;
+              font-family: hind madurai, "fallback for Hind Madurai";
               color: #000;
               h4 {
                 font-weight: 500;

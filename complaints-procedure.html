@@ -35,15 +35,7 @@
     <link rel="manifest" href="/favicons/site.webmanifest" />
 
     <link rel="preload" as="image" href="/images/logo.svg" />
-    <link rel="preload" as="image" href="/images/webpsmall/toppic1-min.webp">
-    <link rel="preload" as="image" href="/images/webplarge/toppic1.webp">
-    <link rel="preload" as="image" href="/images/fullsize/toppic1.jpg">
-    <link rel="preload" as="image" href="/images/webpsmall/toppic2-min.webp">
-    <link rel="preload" as="image" href="/images/webplarge/toppic2.webp">
-    <link rel="preload" as="image" href="/images/fullsize/toppic2.jpg">
-    <link rel="preload" as="image" href="/images/webpsmall/toppic3-min.webp">
-    <link rel="preload" as="image" href="/images/webplarge/toppic3.webp">
-    <link rel="preload" as="image" href="/images/fullsize/toppic3.jpg">
+  
     <!-- landing images in hero section, fonts need to be added when this is finished-->
     <link
       rel="preload"
@@ -63,7 +55,7 @@
       rel="preload"
       as="font"
       type="font/woff2"
-      href="fonts/cormorant-garamond-v16-latin-500.woff2"
+      href="fonts/hind-guntur-v13-latin-700.woff2"
       crossorigin
     />
 
@@ -150,7 +142,7 @@
         </nav>
 
         <!--Mobile Nav toggle-->
-        <button class="hamburger-menu">
+        <button class="hamburger-menu" aria-label="toggle to open mobile navigation menu">
           <span aria-hidden="true"></span>
         </button>
       </div>
@@ -162,8 +154,8 @@
       <section id="mod-hero">
         <div class="hero-content">
           <div class="hero-copy">
-            <h5>home/</h5>
-            <h1>Complaints Procedure</h1>
+            <p class="subtitle">home/</p>
+            <h1>complaints procedure</h1>
           </div>
         </div>
         <div class="hero-slidey">
@@ -183,6 +175,7 @@
             <img
               aria-hidden="true"
               decoding="async"
+              loading="lazy"
               src="/images/fullsize/toppic2.jpg"
               alt="lady with straight teeth smiling"
             />
@@ -193,12 +186,14 @@
             <img
               aria-hidden="true"
               decoding="async"
+              loading="lazy"
               src="/images/fullsize/toppic3.jpg"
               alt="young adult lady happy and smiling"
             />
           </picture>
         </div>
       </section>
+
 
    
       <!--VERTICAL MENU SCROLLER-->
@@ -227,7 +222,7 @@
       <!-----------COMPLAINTS SECTION-------------->
       <section id="p-policy">
         <div class="center-text">
-          <h1>Complaints Procedure</h1>
+          <h2 class="h1-replica">Complaints Procedure</h2>
           <div class="bundle">
             <h3>We take complaints very seriously.</h3>
             <p>
@@ -352,149 +347,151 @@
       </section>
 
       
-      <!------------REACH OUT FORM --------------->
-      <section id="reach-out">
-        <div class="form-wrapper">
-          <p>contact us</p>
-          <h2>reach out</h2>
+     <!------------REACH OUT FORM --------------->
+     <section id="reach-out">
+      <div class="form-wrapper">
+        <p>contact us</p>
+        <h2>reach out</h2>
 
-          <form
-            id="contact"
-            name="Contact Form"
-            method="post"
-            data-netlify="true"
-          >
-            <div class="onerow">
-              <div class="input-group">
-                <label class="f-label">
-                  first name*:
-                  <input
-                    id="first name"
-                    aria-label="first name"
-                    class="input1"
-                    name="first name"
-                    placeholder="john"
-                    type="text"
-                    required
-                  />
-                </label>
-                <div aria-hidden="true" class="hover-box"></div>
-              </div>
-
-              <div class="input-group">
-                <label class="f-label">
-                  last name*:
-                  <input
-                    id="last name"
-                    aria-label="last name"
-                    class="input1"
-                    name="last name"
-                    placeholder="doe"
-                    type="text"
-                    required
-                  />
-                </label>
-                <div aria-hidden="true" class="hover-box"></div>
-              </div>
-            </div>
-
-            <div class="tworow">
-              <div class="input-group">
-                <label class="f-label">
-                  email*:
-                  <input
-                    id="email"
-                    aria-label="email"
-                    class="input1"
-                    name="email"
-                    placeholder="example@example.com"
-                    type="email"
-                    required
-                  />
-                </label>
-                <div aria-hidden="true" class="hover-box"></div>
-              </div>
-
-              <div class="input-group">
-                <label class="f-label">
-                  phone*:
-                  <input
-                    id="phone"
-                    aria-label="phone number"
-                    class="input1"
-                    name="phone"
-                    placeholder="+44 01293 888992"
-                    type="tel"
-                    required
-                  />
-                </label>
-                <div aria-hidden="true" class="hover-box"></div>
-              </div>
-            </div>
-
-            <div class="textarea">
-              <div class="input-group">
-                <label class="f-label">
-                  your enquiry*:
-                  <textarea
-                    id="enquiry"
-                    aria-label="write your enquiry"
-                    name="enquiry"
-                    placeholder="I'd like to ask about..."
-                    required
-                  ></textarea>
-                </label>
-                <div aria-hidden="true" class="hover-box"></div>
-              </div>
-
-              <div class="checkbox">
+        <form
+          id="contact"
+          name="Contact Form"
+          method="post"
+          data-netlify="true"
+        >
+          <div class="onerow">
+            <div class="input-group">
+              <label class="f-label">
+                first name*:
                 <input
-                  type="checkbox"
-                  id="terms"
-                  name="terms"
-                  aria-label="consent to use data"
+                  id="first name"
+                  aria-label="first name"
+                  class="input1"
+                  name="first name"
+                  placeholder="john"
+                  type="text"
                   required
                 />
-                <label for="terms"
-                  >I consent to my data being used in accordance to the
-                  <a href="/privacy-policy.html">Privacy Policy</a></label
-                >
-              </div>
+              </label>
+              <div aria-hidden="true" class="hover-box"></div>
             </div>
-            <div></div>
 
-            <p class="form-submit">
-              <button
-                name="submit"
-                type="submit"
-                id="contact-submit"
-                class="button-solid"
-                data-submit="...Sending"
+            <div class="input-group">
+              <label class="f-label">
+                last name*:
+                <input
+                  id="last name"
+                  aria-label="last name"
+                  class="input1"
+                  name="last name"
+                  placeholder="doe"
+                  type="text"
+                  required
+                />
+              </label>
+              <div aria-hidden="true" class="hover-box"></div>
+            </div>
+          </div>
+
+          <div class="tworow">
+            <div class="input-group">
+              <label class="f-label">
+                email*:
+                <input
+                  id="email"
+                  aria-label="email"
+                  class="input1"
+                  name="email"
+                  placeholder="example@example.com"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+              <div aria-hidden="true" class="hover-box"></div>
+            </div>
+
+            <div class="input-group">
+              <label class="f-label">
+                phone*:
+                <input
+                  id="phone"
+                  aria-label="phone number"
+                  class="input1"
+                  name="phone"
+                  placeholder="+44 01293 888992"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                />
+              </label>
+              <div aria-hidden="true" class="hover-box"></div>
+            </div>
+          </div>
+
+          <div class="textarea">
+            <div class="input-group">
+              <label class="f-label">
+                your enquiry*:
+                <textarea
+                  id="enquiry"
+                  aria-label="write your enquiry"
+                  name="enquiry"
+                  placeholder="I'd like to ask about..."
+                  required
+                ></textarea>
+              </label>
+              <div aria-hidden="true" class="hover-box"></div>
+            </div>
+
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                aria-label="consent to use data"
+                required
+              />
+              <label for="terms"
+                >I consent to my data being used in accordance to the
+                <a href="/privacy-policy.html">Privacy Policy</a></label
               >
-                send enquiry
-              </button>
-            </p>
-          </form>
-        </div>
+            </div>
+          </div>
+          <div></div>
 
-        <picture>
-          <source
-            media="(max-width: 600px)"
-            srcset="/images/webpsmall/contact-min.webp"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/images/webplarge/contact.webp"
-          />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/images/fullsize/contact.jpg"
-            alt="man using his phone smiling"
-            loading="lazy"
-          />
-        </picture>
-      </section>
+          <p class="form-submit">
+            <button
+              name="submit"
+              type="submit"
+              id="contact-submit"
+              class="button-solid"
+              data-submit="...Sending"
+            >
+              send enquiry
+            </button>
+          </p>
+        </form>
+      </div>
+
+      <picture>
+        <source
+          media="(max-width: 600px)"
+          srcset="/images/webpsmall/contact-min.webp"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="/images/webplarge/contact.webp"
+        />
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="/images/fullsize/contact.jpg"
+          alt="man using his phone smiling"
+          loading="lazy"
+        />
+      </picture>
+    </section>
     </main>
 
     <!---------Footer-------->
@@ -506,30 +503,40 @@
             alt="Mouth Cancer Foundation logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="74" height="27"
           />
           <img
             src="/images/CQC.svg"
             alt="CQC logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="53" height="18"
           />
           <img
             src="/images/whitedb.svg"
             alt="White Dental Beauty logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="18" height="18"
           />
           <img
             src="/images/BDA.svg"
             alt="BDA logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="44" height="18"
           />
           <img
             src="/images/NHS.svg"
             alt="NHS logo"
             aria-hidden="true"
             decoding="async"
+            loading="lazy"
+            width="44" height="18"
           />
         </div>
       </div>

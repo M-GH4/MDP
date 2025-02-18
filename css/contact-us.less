@@ -73,13 +73,13 @@
           gap: 23/16em;
 
           p {
-            font-family: hind madurai;
+            font-family: hind madurai, "fallback for Hind Madurai";
             z-index: 1;
           }
 
           .cs-title {
             max-width: 30ch;
-            font-family: cormorant garamond;
+            font-family: cormorant garamond, "fallback for Cormorant Garamond R";
             z-index: 1;
             color: #fff;
             font-size: clamp(1.5em, 3vw, 2em);
@@ -122,7 +122,7 @@
                 input:focus,
                 #enquiry:focus {
                   box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.6);
-                  font-family: hind madurai;
+                  font-family: hind madurai, "fallback for Hind Madurai";
                 }
 
                 #enquiry {
@@ -135,7 +135,7 @@
 
                 ::placeholder {
                   color: #000;
-                  font-family: hind madurai;
+                  font-family: hind madurai, "fallback for Hind Madurai";
                 }
               }
             }
@@ -159,7 +159,7 @@
               text-align: center;
               label {
                 text-transform: none;
-                font-family: hind madurai;
+                font-family: hind madurai, "fallback for Hind Madurai";
                 font-size: 12/16em;
 
                 a {
@@ -284,7 +284,7 @@
         outline: none;
         font-size: 16/16em;
         transition: 0.4s;
-        font-family: hind guntur;
+        font-family: hind guntur, "fallback for Hind Guntur 500";
         font-weight: 600;
 
         &:hover {
@@ -302,7 +302,7 @@
 
       h1 {
         max-width: 30ch;
-        font-family: cormorant garamond;
+        font-family: cormorant garamond, "fallback for Cormorant Garamond R";
         font-size: clamp(1.5em, 3vw, 2em);
         text-align: center;
         justify-content: center;
@@ -380,7 +380,7 @@
             color: #000;
           }
           .closed {
-            color: #7b8987;
+            color: var(--secondary);
           }
         }
       }

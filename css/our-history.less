@@ -17,7 +17,7 @@
         h2,
         .title,
         p {
-          font-family: cormorant garamond;
+          font-family: cormorant garamond, "fallback for Cormorant Garamond R";
         }
 
         .t-wrapper {
@@ -221,7 +221,7 @@
     align-items: center;
     justify-content: center;
     transition: background 0.4s ease-in;
-    background-image: url("/images/wavesbg.jpg");
+    background-image: url("/images/wavesbg.webp");
     margin: 0;
     padding: 0;
     width: 100%;
@@ -286,19 +286,19 @@
               h2 {
                 color: #fff;
                 font-size: 16/16em;
-                font-family: cormorant garamond;
+                font-family: cormorant garamond, "fallback for Cormorant Garamond R";
                 margin: 4px 0px;
               }
 
               h5 {
                 font-size: 8/16em;
-                font-family: hind guntur;
+                font-family: hind guntur, "fallback for Hind Guntur";
                 text-transform: uppercase;
                 color: #fff;
               }
               p {
                 color: #fff;
-                font-family: hind madurai;
+                font-family: hind madurai, "fallback for Hind Madurai";
                 font-size: 12/16em;
               }
             }
@@ -601,6 +601,7 @@
 /********************* YEARS ***************************/
 
 #years {
+  overflow: hidden;
   display: flex;
   align-items: center;
   height: 66/16em;
@@ -611,7 +612,7 @@
     width: 100%;
     gap: 5/16em;
     h3 {
-      font-family: hind guntur;
+      font-family: hind guntur, "fallback for Hind Guntur Bold";
       font-size: 16/16em;
       font-weight: 700;
       background: linear-gradient(45deg, #fff, #9c91dd, #c593ca, #a2d2ff);

@@ -45,6 +45,6 @@ const handleTouchEnd = () => {
 };
 
 // Add event listeners to the container
-container.addEventListener('touchstart', handleTouchStart);
-container.addEventListener('touchmove', handleTouchMove);
+container.addEventListener('touchstart', handleTouchStart,{passive: true});
+container.addEventListener('touchmove', handleTouchMove,{passive: true});
 container.addEventListener('touchend', handleTouchEnd);
